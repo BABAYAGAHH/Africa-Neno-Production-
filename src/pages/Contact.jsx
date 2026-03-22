@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Clock3, Facebook, Instagram, Mail, MapPin, MessageCircle, Phone, Youtube } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import CTASection from '../components/CTASection';
@@ -15,7 +15,7 @@ const iconMap = {
 
 export default function Contact() {
   useEffect(() => {
-    setPageMeta('Contact | LuxeFrame Studio');
+    setPageMeta('Contact | Africa Neno Production');
     window.scrollTo(0, 0);
   }, []);
 
@@ -121,3 +121,4 @@ export default function Contact() {
     </>
   );
 }
+

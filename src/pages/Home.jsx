@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Aperture, BadgeCheck, Clock3, Heart, Layers3, Sparkles } from 'lucide-react';
 import { Link } from 'react-router';
 import CTASection from '../components/CTASection';
@@ -18,7 +18,6 @@ import {
   aboutShortCopy,
   ctaContent,
   brandHighlights,
-  heroContent,
   servicesShortCopy,
   setPageMeta,
   whyChooseUs,
@@ -36,7 +35,7 @@ const iconMap = {
 
 export default function Home() {
   useEffect(() => {
-    setPageMeta('Home | LuxeFrame Studio');
+    setPageMeta('Home | Africa Neno Production');
     window.scrollTo(0, 0);
   }, []);
 

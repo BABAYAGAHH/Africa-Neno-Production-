@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react';
+import { useEffect } from 'react';
 import CTASection from '../components/CTASection';
 import PageHero from '../components/PageHero';
 import SectionHeader from '../components/SectionHeader';
@@ -9,7 +9,7 @@ import { testimonials } from '../data/testimonials';
 
 export default function Testimonials() {
   useEffect(() => {
-    setPageMeta('Testimonials | LuxeFrame Studio');
+    setPageMeta('Testimonials | Africa Neno Production');
     window.scrollTo(0, 0);
   }, []);
 
@@ -48,3 +48,4 @@ export default function Testimonials() {
     </>
   );
 }
+

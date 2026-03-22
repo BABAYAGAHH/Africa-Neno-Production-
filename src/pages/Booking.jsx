@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { CalendarDays, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import BookingForm from '../components/BookingForm';
 import CTASection from '../components/CTASection';
@@ -9,7 +9,7 @@ import { email, phone, address, setPageMeta, whatsappLink } from '../data/site';
 
 export default function Booking() {
   useEffect(() => {
-    setPageMeta('Booking | LuxeFrame Studio');
+    setPageMeta('Booking | Africa Neno Production');
     window.scrollTo(0, 0);
   }, []);
 
@@ -58,3 +58,4 @@ export default function Booking() {
     </>
   );
 }
+

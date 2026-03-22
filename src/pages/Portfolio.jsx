@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react';
+import { useEffect } from 'react';
 import CTASection from '../components/CTASection';
 import GalleryGrid from '../components/GalleryGrid';
 import PageHero from '../components/PageHero';
@@ -9,7 +9,7 @@ import { setPageMeta } from '../data/site';
 
 export default function Portfolio() {
   useEffect(() => {
-    setPageMeta('Portfolio | LuxeFrame Studio');
+    setPageMeta('Portfolio | Africa Neno Production');
     window.scrollTo(0, 0);
   }, []);
 
@@ -45,3 +45,4 @@ export default function Portfolio() {
     </>
   );
 }
+

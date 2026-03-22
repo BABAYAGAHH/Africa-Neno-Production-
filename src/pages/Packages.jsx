@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router';
 import CTASection from '../components/CTASection';
 import FAQAccordion from '../components/FAQAccordion';
@@ -12,7 +12,7 @@ import { setPageMeta } from '../data/site';
 
 export default function Packages() {
   useEffect(() => {
-    setPageMeta('Packages | LuxeFrame Studio');
+    setPageMeta('Packages | Africa Neno Production');
     window.scrollTo(0, 0);
   }, []);
 
@@ -79,3 +79,4 @@ export default function Packages() {
     </>
   );
 }
+

@@ -1,7 +1,7 @@
-﻿export const studioName = 'LuxeFrame Studio';
+export const studioName = 'Africa Neno Production';
 export const tagline = "Premium photography for life's most meaningful moments.";
 export const phone = '+234 800 000 0000';
-export const email = 'hello@luxeframestudio.com';
+export const email = 'hello@africanenoproduction.com';
 export const address = 'Studio address coming soon, Lagos, Nigeria';
 export const whatsappNumber = '2348000000000';
 export const whatsappMessage = 'Hello, I would like to book a photography session.';
@@ -125,7 +125,7 @@ export const coreValues = [
 export const teamMembers = [
   {
     name: 'Lead Photographer',
-    role: 'Directs sessions and captures the signature LuxeFrame visual tone.',
+    role: 'Directs sessions and captures the signature Africa Neno Production visual tone.',
     image:
       'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80',
   },
@@ -166,5 +166,3 @@ export function setPageMeta(title, description = seoDescription) {
 
   metaTag.content = description;
 }
-
-

@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router';
 import CTASection from '../components/CTASection';
 import PageHero from '../components/PageHero';
@@ -8,7 +8,7 @@ import { aboutShortCopy, coreValues, mission, setPageMeta, teamMembers, vision }
 
 export default function About() {
   useEffect(() => {
-    setPageMeta('About | LuxeFrame Studio');
+    setPageMeta('About | Africa Neno Production');
     window.scrollTo(0, 0);
   }, []);
 
@@ -33,7 +33,7 @@ export default function About() {
           <div>
             <SectionHeader
               eyebrow="Studio Story"
-              title="LuxeFrame Studio was created to turn important moments into lasting visual heirlooms."
+              title="Africa Neno Production was created to turn important moments into lasting visual heirlooms."
               description="Our studio is built on a passion for storytelling through photography. We believe every image should preserve emotion, beauty, and authenticity. Our goal is to create a comfortable experience and deliver photographs our clients will cherish for years."
             />
             <p className="mt-6 text-sm leading-8 text-white/68">
@@ -102,7 +102,7 @@ export default function About() {
       <CTASection
         eyebrow="Book a Session"
         title="Bring your story to the studio and let us shape it beautifully."
-        description="From portraits to events, LuxeFrame Studio is positioned as a premium, cinematic, and conversion-ready photography brand."
+        description="From portraits to events, Africa Neno Production is positioned as a premium, cinematic, and conversion-ready photography brand."
         primaryAction={{ label: 'Book a Session', to: '/booking' }}
         secondaryAction={{ label: 'View Portfolio', to: '/portfolio' }}
         image="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80"
@@ -110,3 +110,4 @@ export default function About() {
     </>
   );
 }
+

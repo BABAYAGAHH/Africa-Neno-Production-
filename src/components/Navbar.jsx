@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { Link, NavLink, useLocation } from 'react-router';
@@ -32,7 +32,7 @@ export default function Navbar() {
         >
           <Link to="/" className="flex items-center gap-3">
             <span className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/35 bg-gold/10 font-display text-xl text-gold">
-              LF
+              AN
             </span>
             <div>
               <p className="font-display text-2xl leading-none text-white">{studioName}</p>
@@ -110,3 +110,4 @@ export default function Navbar() {
     </header>
   );
 }
+
