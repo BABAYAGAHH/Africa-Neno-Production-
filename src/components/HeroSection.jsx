@@ -25,7 +25,14 @@ export default function HeroSection() {
             transition={{ duration: 0.55, ease: 'easeOut' }}
             className="max-w-3xl"
           >
-            <BrandLogo className="w-fit" imageClassName="h-12 max-w-[220px] sm:h-14 sm:max-w-[260px]" />
+            <BrandLogo
+              className="w-fit"
+              showName
+              showSubtitle
+              imageClassName="h-20 sm:h-24 lg:h-28"
+              nameClassName="text-white text-xl sm:text-3xl lg:text-4xl"
+              subtitleClassName="text-white/58"
+            />
             <span className="eyebrow mt-8">Professional Photography Studio</span>
             <h1 className="mt-8 font-display text-5xl leading-[0.92] text-white sm:text-6xl lg:text-8xl">
               {heroContent.title}

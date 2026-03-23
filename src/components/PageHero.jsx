@@ -16,7 +16,12 @@ export default function PageHero({ eyebrow, title, description, image }) {
           transition={{ duration: 0.55, ease: 'easeOut' }}
           className="max-w-4xl"
         >
-          <BrandLogo className="w-fit" imageClassName="h-10 max-w-[180px] sm:h-12 sm:max-w-[210px]" />
+          <BrandLogo
+            className="w-fit"
+            showName
+            imageClassName="h-16 sm:h-20"
+            nameClassName="text-white text-lg sm:text-2xl"
+          />
           <span className="eyebrow mt-7">{eyebrow}</span>
           <h1 className="mt-7 font-display text-5xl leading-[0.96] text-white sm:text-6xl lg:text-7xl">
             {title}

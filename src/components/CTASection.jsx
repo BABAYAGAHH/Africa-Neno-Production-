@@ -21,7 +21,12 @@ export default function CTASection({ eyebrow, title, description, primaryAction,
           </div>
           <div className="relative z-10 px-6 py-16 sm:px-10 lg:px-16 lg:py-20">
             <div className="max-w-3xl">
-              <BrandLogo className="w-fit" imageClassName="h-10 max-w-[180px] sm:h-12 sm:max-w-[210px]" />
+              <BrandLogo
+                className="w-fit"
+                showName
+                imageClassName="h-16 sm:h-20"
+                nameClassName="text-white text-lg sm:text-2xl"
+              />
               <span className="eyebrow mt-6">{eyebrow}</span>
               <h2 className="mt-6 font-display text-4xl text-white sm:text-6xl">{title}</h2>
               <p className="mt-5 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">

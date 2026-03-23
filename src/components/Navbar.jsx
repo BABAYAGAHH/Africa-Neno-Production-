@@ -31,8 +31,14 @@ export default function Navbar() {
               : 'border-white/70 bg-white/80 shadow-[0_20px_50px_rgba(11,51,23,0.08)] backdrop-blur-xl'
           }`}
         >
-          <Link to="/" className="shrink-0">
-            <BrandLogo imageClassName="h-10 max-w-[170px] sm:h-11 sm:max-w-[210px]" />
+          <Link to="/" className="min-w-0 shrink-0">
+            <BrandLogo
+              showName
+              showSubtitle
+              imageClassName="h-14 sm:h-16"
+              nameClassName="text-brand-deep text-base sm:text-[1.7rem]"
+              subtitleClassName="hidden text-brand-deep/58 sm:block"
+            />
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">
@@ -77,7 +83,13 @@ export default function Navbar() {
               className="mt-4 lg:hidden"
             >
               <div className="light-panel p-6">
-                <BrandLogo imageClassName="h-10 max-w-[170px]" />
+                <BrandLogo
+                  showName
+                  showSubtitle
+                  imageClassName="h-14"
+                  nameClassName="text-brand-deep text-base"
+                  subtitleClassName="text-brand-deep/58"
+                />
                 <nav className="mt-6 flex flex-col gap-5">
                   {navLinks.map((link) => (
                     <NavLink

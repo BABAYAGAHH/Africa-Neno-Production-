@@ -23,7 +23,13 @@ export default function Footer() {
       <div className="section-shell py-16">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
-            <BrandLogo imageClassName="h-14 max-w-[260px] sm:h-16" />
+            <BrandLogo
+              showName
+              showSubtitle
+              imageClassName="h-20 sm:h-24"
+              nameClassName="text-white text-xl sm:text-3xl"
+              subtitleClassName="text-white/58"
+            />
             <h2 className="mt-6 max-w-sm font-display text-4xl text-white sm:text-5xl">
               Photography shaped with warmth, clarity, and timeless intention.
             </h2>
