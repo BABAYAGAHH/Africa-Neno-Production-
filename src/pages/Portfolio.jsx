@@ -17,16 +17,16 @@ export default function Portfolio() {
     <>
       <PageHero
         eyebrow="Portfolio"
-        title="A premium portfolio gallery with category filters, hover polish, and click-to-open lightbox viewing."
-        description="Weddings, Portraits, Events, Family, Studio, Outdoor, and Product work are all included in this responsive gallery starter."
+        title="A portfolio shaped by real moments, polished direction, and timeless finishing."
+        description="Explore weddings, portraits, events, family sessions, studio work, outdoor shoots, and brand visuals."
         image="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80"
       />
 
       <SectionWrapper>
         <SectionHeader
           eyebrow="Gallery"
-          title="Strong imagery, clean spacing, and a modern browsing experience keep the portfolio at the center."
-          description="Filter categories, view the full grid, and open any image in a stylish modal for a more immersive presentation."
+          title="Strong imagery, clean spacing, and an immersive viewing experience keep the work at the center."
+          description="Filter by category, browse full-size previews, and experience the portfolio in a refined lightbox."
           align="center"
         />
         <div className="mt-12">
@@ -35,9 +35,9 @@ export default function Portfolio() {
       </SectionWrapper>
 
       <CTASection
-        eyebrow="Create Your Own Gallery"
-        title="Let your next session become part of a premium portfolio story."
-        description="Use the booking page to start planning portraits, weddings, family sessions, event coverage, or custom visual work."
+        eyebrow="Create Your Story"
+        title="Let your next session become part of a beautiful visual story."
+        description="Use the booking page to start planning portraits, weddings, family sessions, events, or custom visual work."
         primaryAction={{ label: 'Book a Session', to: '/booking' }}
         secondaryAction={{ label: 'Contact Studio', to: '/contact' }}
         image="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?auto=format&fit=crop&w=1600&q=80"
@@ -45,4 +45,3 @@ export default function Portfolio() {
     </>
   );
 }
-

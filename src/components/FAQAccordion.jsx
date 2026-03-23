@@ -1,4 +1,4 @@
-﻿import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
@@ -14,7 +14,7 @@ export default function FAQAccordion({ items, tone = 'dark' }) {
           <div
             key={item.id}
             className={`overflow-hidden rounded-[24px] border ${
-              isLight ? 'border-black/8 bg-white shadow-soft' : 'border-white/10 bg-white/[0.04] shadow-soft'
+              isLight ? 'border-brand-deep/8 bg-white shadow-soft' : 'border-white/12 bg-white/[0.08] shadow-soft'
             }`}
           >
             <button
@@ -25,7 +25,7 @@ export default function FAQAccordion({ items, tone = 'dark' }) {
               <span className={`font-semibold ${isLight ? 'text-charcoal' : 'text-white'}`}>
                 {item.question}
               </span>
-              <span className={`inline-flex h-10 w-10 items-center justify-center rounded-full ${isLight ? 'bg-gold/10 text-gold' : 'bg-white/5 text-gold'} ${isOpen ? 'rotate-180' : ''}`}>
+              <span className={`inline-flex h-10 w-10 items-center justify-center rounded-full ${isLight ? 'bg-gold/12 text-gold' : 'bg-white/10 text-gold'} ${isOpen ? 'rotate-180' : ''}`}>
                 <ChevronDown size={18} />
               </span>
             </button>
@@ -37,7 +37,7 @@ export default function FAQAccordion({ items, tone = 'dark' }) {
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.25 }}
                 >
-                  <div className={`px-6 pb-6 text-sm leading-7 ${isLight ? 'text-charcoal/70' : 'text-white/65'}`}>
+                  <div className={`px-6 pb-6 text-sm leading-7 ${isLight ? 'text-charcoal/70' : 'text-white/68'}`}>
                     {item.answer}
                   </div>
                 </motion.div>

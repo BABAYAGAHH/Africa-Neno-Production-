@@ -1,4 +1,4 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   Aperture,
   ArrowRight,
@@ -44,15 +44,15 @@ export default function ServiceCard({ service, index = 0 }) {
               alt={service.title}
               className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-darker/88 to-transparent" />
           </div>
         ) : null}
         <div className="p-6 sm:p-7">
-          <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/10 text-gold">
+          <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/15 text-gold">
             <Icon size={24} />
           </span>
           <h3 className="mt-5 font-display text-3xl text-white">{service.title}</h3>
-          <p className="mt-3 text-sm leading-7 text-white/65">{service.description}</p>
+          <p className="mt-3 text-sm leading-7 text-white/68">{service.description}</p>
           <Link
             to="/booking"
             className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.22em] text-white transition hover:text-gold"

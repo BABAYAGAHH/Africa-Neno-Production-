@@ -43,13 +43,13 @@ export default function Home() {
     <>
       <HeroSection />
 
-      <SectionWrapper className="-mt-20 relative z-10 pt-0">
+      <SectionWrapper className="relative z-10 -mt-20 pt-0">
         <div className="grid gap-6 lg:grid-cols-4">
           {brandHighlights.map((item, index) => (
             <div key={item.title} className="glass-panel p-6">
               <p className="text-[10px] uppercase tracking-[0.34em] text-gold">0{index + 1}</p>
               <h3 className="mt-4 font-display text-3xl text-white">{item.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-white/65">{item.description}</p>
+              <p className="mt-3 text-sm leading-7 text-white/68">{item.description}</p>
             </div>
           ))}
         </div>
@@ -66,8 +66,8 @@ export default function Home() {
           </div>
           <div>
             <SectionHeader
-              eyebrow="About Preview"
-              title="A studio experience built to feel elegant, comfortable, and beautifully intentional."
+              eyebrow="About The Studio"
+              title="A studio experience that feels calm, polished, and unmistakably personal."
               description={aboutShortCopy}
               tone="light"
             />
@@ -79,8 +79,8 @@ export default function Home() {
       <SectionWrapper>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeader
-            eyebrow="Services Preview"
-            title="Premium photography services designed for modern clients and meaningful stories."
+            eyebrow="Services"
+            title="Photography services built for milestones, portraits, brands, and beautifully documented events."
             description={servicesShortCopy}
           />
           <Link to="/services" className="btn-secondary self-start">View All Services</Link>
@@ -94,9 +94,9 @@ export default function Home() {
 
       <SectionWrapper tone="light">
         <SectionHeader
-          eyebrow="Packages Preview"
-          title="Three polished packages to help visitors choose quickly and confidently."
-          description="Basic, Standard, and Premium options designed for portraits, families, events, and high-value coverage."
+          eyebrow="Packages"
+          title="Simple package options that help clients choose with confidence."
+          description="Compare coverage, turnaround, and included features at a glance, then book the package that fits your moment best."
           align="center"
           tone="light"
         />
@@ -110,9 +110,9 @@ export default function Home() {
       <SectionWrapper>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeader
-            eyebrow="Portfolio Preview"
-            title="The portfolio stays at the center of the experience."
-            description="Elegant gallery previews, category filters, and an immersive lightbox help the work speak first."
+            eyebrow="Portfolio"
+            title="A curated look at the moments, moods, and stories we have captured."
+            description="Browse selected work across portraits, events, weddings, family sessions, and brand imagery."
           />
           <Link to="/portfolio" className="btn-secondary self-start">View Full Portfolio</Link>
         </div>
@@ -124,7 +124,7 @@ export default function Home() {
       <SectionWrapper tone="light">
         <SectionHeader
           eyebrow="Why Choose Us"
-          title="A premium process built around confidence, polish, and meaningful visual results."
+          title="A premium process built around clarity, comfort, and beautifully finished results."
           description="From direction and editing to communication and delivery, every part of the experience is designed to feel elevated."
           align="center"
           tone="light"
@@ -134,7 +134,7 @@ export default function Home() {
             const Icon = iconMap[item.icon] || Sparkles;
             return (
               <div key={item.title} className="light-panel p-7">
-                <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/10 text-gold">
+                <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/12 text-gold">
                   <Icon size={24} />
                 </span>
                 <h3 className="mt-5 font-display text-3xl">{item.title}</h3>
@@ -148,9 +148,9 @@ export default function Home() {
       <SectionWrapper>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeader
-            eyebrow="Testimonials Preview"
-            title="Testimonials add trust, warmth, and conversion momentum."
-            description="Clients consistently highlight the comfort of the process and the polish of the final images."
+            eyebrow="Testimonials"
+            title="The kind words we receive matter just as much as the images we deliver."
+            description="Clients consistently mention the comfort of the process, the clarity of communication, and the polish of the final gallery."
           />
           <Link to="/testimonials" className="btn-secondary self-start">See All Reviews</Link>
         </div>
@@ -164,9 +164,9 @@ export default function Home() {
       <SectionWrapper tone="light">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionHeader
-            eyebrow="FAQ Preview"
-            title="Common questions answered before clients make their move."
-            description="Simple, clear answers help visitors feel ready to inquire or book."
+            eyebrow="FAQ"
+            title="Answers to the questions clients ask before they are ready to book."
+            description="Simple, clear answers help visitors feel informed, confident, and ready to take the next step."
             tone="light"
           />
           <FAQAccordion items={faq} tone="light" />
@@ -174,9 +174,9 @@ export default function Home() {
       </SectionWrapper>
 
       <CTASection
-        eyebrow="Final CTA"
+        eyebrow="Ready To Begin"
         title={ctaContent.title}
-        description="Invite visitors to start the booking process, explore packages, or contact the studio with confidence."
+        description="Africa Neno Production is ready to plan portraits, weddings, events, and custom visual sessions with you."
         primaryAction={{ label: ctaContent.primary, to: '/booking' }}
         secondaryAction={{ label: ctaContent.secondary, to: '/contact' }}
         image="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80"

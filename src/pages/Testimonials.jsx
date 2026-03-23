@@ -17,16 +17,16 @@ export default function Testimonials() {
     <>
       <PageHero
         eyebrow="Testimonials"
-        title="Six strong testimonials help the studio feel trusted, polished, and easy to choose."
-        description="This page uses elegant testimonial cards with rating stars and service labels to strengthen social proof."
+        title="Kind words from clients who trusted us with their most important moments."
+        description="Each review reflects the calm process, clear communication, and polished results we work hard to deliver."
         image="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1600&q=80"
       />
 
       <SectionWrapper tone="light">
         <SectionHeader
           eyebrow="Client Stories"
-          title="Thoughtful presentation turns simple reviews into a strong trust-building section."
-          description="Use this layout to highlight how the experience feels as much as the final images look."
+          title="Real experiences that speak to the quality of the journey and the final gallery."
+          description="We want every client to feel comfortable, guided, and proud of what we create together."
           align="center"
           tone="light"
         />
@@ -39,8 +39,8 @@ export default function Testimonials() {
 
       <CTASection
         eyebrow="Book With Confidence"
-        title="Make your own session the next success story."
-        description="The testimonial page keeps the design premium while encouraging visitors to take the next step toward booking."
+        title="Make your own session the next memorable success story."
+        description="We are ready to create work that feels personal, polished, and worth sharing."
         primaryAction={{ label: 'Book a Session', to: '/booking' }}
         secondaryAction={{ label: 'View Portfolio', to: '/portfolio' }}
         image="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=80"
@@ -48,4 +48,3 @@ export default function Testimonials() {
     </>
   );
 }
-

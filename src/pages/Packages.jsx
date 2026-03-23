@@ -20,16 +20,16 @@ export default function Packages() {
     <>
       <PageHero
         eyebrow="Packages"
-        title="Three premium packages structured to sell clearly and convert with confidence."
-        description="Each card highlights the essentials clients care about most: price, duration, edited photos, features, and an easy next step."
+        title="Packages designed to make choosing your session simple and confident."
+        description="Compare coverage, delivery, and included features, then book the option that matches your needs best."
         image="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80"
       />
 
       <SectionWrapper tone="light">
         <SectionHeader
-          eyebrow="Package Grid"
-          title="Basic, Standard, and Premium with strong visual hierarchy and clean comparison."
-          description="Use this as a polished starting point for studio sessions, family shoots, weddings, and custom event coverage."
+          eyebrow="Package Options"
+          title="Clear package choices for portraits, families, events, and custom coverage."
+          description="Choose a starting package, then tailor the finer details with us if needed."
           align="center"
           tone="light"
         />
@@ -42,12 +42,13 @@ export default function Packages() {
 
       <SectionWrapper>
         <div className="glass-panel p-8 sm:p-10 lg:p-14">
-          <p className="text-[10px] uppercase tracking-[0.34em] text-gold">Custom Package Banner</p>
+          <p className="text-[10px] uppercase tracking-[0.34em] text-gold">Custom Quotes</p>
           <h2 className="mt-5 max-w-3xl font-display text-4xl text-white sm:text-6xl">
-            Need something different? We can tailor a package to your event, style, and budget.
+            Need something more tailored? We can build coverage around your event, concept, or budget.
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-8 text-white/68">
-            Custom packages are available for unique concepts, destination work, large events, and special coverage needs that go beyond a standard session.
+          <p className="mt-5 max-w-2xl text-base leading-8 text-white/70">
+            Custom packages are available for destination work, large events, special concepts, and coverage that goes
+            beyond a standard session format.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link to="/booking" className="btn-primary">Request Custom Quote</Link>
@@ -60,8 +61,8 @@ export default function Packages() {
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionHeader
             eyebrow="Package FAQ"
-            title="Supportive answers below the pricing section keep the page helpful and conversion-focused."
-            description="This section can also be turned into a notes panel or custom quote policy section later."
+            title="Helpful answers for clients comparing packages and planning their session."
+            description="Everything here is designed to keep the decision clear, practical, and stress-free."
             tone="light"
           />
           <FAQAccordion items={faq} tone="light" />
@@ -69,9 +70,9 @@ export default function Packages() {
       </SectionWrapper>
 
       <CTASection
-        eyebrow="Ready to Book"
-        title="Choose a package, then refine the details with us."
-        description="The starter scaffold is built to help visitors move from interest to inquiry with minimal friction."
+        eyebrow="Ready To Book"
+        title="Choose a package, then let us refine the details together."
+        description="We will help shape the final plan around your date, location, style, and coverage needs."
         primaryAction={{ label: 'Book a Session', to: '/booking' }}
         secondaryAction={{ label: 'View Portfolio', to: '/portfolio' }}
         image="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80"
@@ -79,4 +80,3 @@ export default function Packages() {
     </>
   );
 }
-

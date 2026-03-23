@@ -17,7 +17,7 @@ export default function Services() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Photography services for portraits, weddings, celebrations, family moments, and premium brand visuals."
+        title="Portraits, weddings, events, family sessions, and brand visuals handled with polish and care."
         description={servicesShortCopy}
         image="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?auto=format&fit=crop&w=1600&q=80"
       />
@@ -25,8 +25,8 @@ export default function Services() {
       <SectionWrapper>
         <SectionHeader
           eyebrow="Full Service Menu"
-          title="Each service card is built to be reusable, polished, and ready for production starter content."
-          description="Every card includes a title, short description, icon, and direct CTA so the page feels both elegant and conversion-focused."
+          title="Explore the services we offer across studio, outdoor, event, and custom sessions."
+          description="Each service is built around clear direction, reliable delivery, and imagery that feels polished and memorable."
           align="center"
         />
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -37,9 +37,9 @@ export default function Services() {
       </SectionWrapper>
 
       <CTASection
-        eyebrow="Need a Custom Session"
+        eyebrow="Need A Custom Session"
         title="If you are unsure which service fits best, start with a conversation."
-        description="We can recommend the right photography direction, coverage level, and package based on your occasion and goals."
+        description="We can recommend the right direction, coverage level, and package based on your occasion, goals, and preferred style."
         primaryAction={{ label: 'Book a Session', to: '/booking' }}
         secondaryAction={{ label: 'Contact Studio', to: '/contact' }}
         image="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1600&q=80"
@@ -47,4 +47,3 @@ export default function Services() {
     </>
   );
 }
-

@@ -1,4 +1,4 @@
-﻿export default function SectionWrapper({
+export default function SectionWrapper({
   children,
   className = '',
   tone = 'dark',
@@ -6,7 +6,9 @@
   containerClassName = '',
 }) {
   const toneClass =
-    tone === 'light' ? 'bg-ivory text-charcoal' : 'bg-transparent text-ivory';
+    tone === 'light'
+      ? 'bg-ivory text-charcoal'
+      : 'bg-[linear-gradient(180deg,#0d3919_0%,#082712_100%)] text-white';
 
   return (
     <section id={id} className={`page-pad ${toneClass} ${className}`}>

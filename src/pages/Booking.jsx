@@ -17,8 +17,8 @@ export default function Booking() {
     <>
       <PageHero
         eyebrow="Booking"
-        title="Book your photography session with a clear form, supportive notes, and quick-book WhatsApp access."
-        description="The booking page is designed to convert interest into action with a premium layout and a clean form experience."
+        title="Book your session with clear next steps and a smooth inquiry experience."
+        description="Share the session type, preferred date, location, and any special details so we can plan with you properly."
         image="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80"
       />
 
@@ -29,8 +29,8 @@ export default function Booking() {
             <div className="glass-panel p-8">
               <SectionHeader
                 eyebrow="Booking Info"
-                title="The form is paired with helpful details to keep the decision easy."
-                description="Use this side panel for reassurance, next steps, response time, and direct contact options."
+                title="Everything you need to inquire confidently is right here."
+                description="Use the form for detailed requests or reach out directly if you would prefer to discuss your session first."
               />
               <div className="mt-8 space-y-4 text-sm text-white/68">
                 <p className="flex items-center gap-3"><Phone size={16} className="text-gold" /> {phone}</p>
@@ -49,8 +49,8 @@ export default function Booking() {
 
       <CTASection
         eyebrow="Need Something Custom"
-        title="Custom requests fit naturally into this booking flow."
-        description="The form already includes custom service and package options, so the scaffold is ready for real inquiries."
+        title="Tell us what you need and we will help shape the right session plan."
+        description="We can recommend the right structure, coverage, and package based on your occasion and preferences."
         primaryAction={{ label: 'Contact Studio', to: '/contact' }}
         secondaryAction={{ label: 'View Packages', to: '/packages' }}
         image="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?auto=format&fit=crop&w=1600&q=80"
@@ -58,4 +58,3 @@ export default function Booking() {
     </>
   );
 }
-

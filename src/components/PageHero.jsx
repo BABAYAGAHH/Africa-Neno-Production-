@@ -1,11 +1,13 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import BrandLogo from './BrandLogo';
 
 export default function PageHero({ eyebrow, title, description, image }) {
   return (
     <section className="relative overflow-hidden pt-28 sm:pt-32">
       <div className="absolute inset-0">
         <img src={image} alt={title} className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-[#111111]/82 to-[#111111]/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-darker/92 via-brand-deep/86 to-brand-deep/72" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(144,190,66,0.22),transparent_34%)]" />
       </div>
       <div className="section-shell relative z-10 py-20 sm:py-24 lg:py-28">
         <motion.div
@@ -14,11 +16,12 @@ export default function PageHero({ eyebrow, title, description, image }) {
           transition={{ duration: 0.55, ease: 'easeOut' }}
           className="max-w-4xl"
         >
-          <span className="eyebrow">{eyebrow}</span>
+          <BrandLogo className="w-fit" imageClassName="h-10 max-w-[180px] sm:h-12 sm:max-w-[210px]" />
+          <span className="eyebrow mt-7">{eyebrow}</span>
           <h1 className="mt-7 font-display text-5xl leading-[0.96] text-white sm:text-6xl lg:text-7xl">
             {title}
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
             {description}
           </p>
         </motion.div>

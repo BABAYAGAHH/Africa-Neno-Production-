@@ -23,8 +23,8 @@ export default function Contact() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="A polished contact page with info cards, form fields, business hours, and social links."
-        description="Use phone, WhatsApp, email, the contact form, or a future map section to help visitors reach the studio quickly."
+        title="Let's talk about your next session, event, or visual project."
+        description="Use the form, phone, WhatsApp, or email to reach Africa Neno Production quickly and confidently."
         image="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80"
       />
 
@@ -39,10 +39,10 @@ export default function Contact() {
             const Icon = card.icon;
             return (
               <div key={card.title} className="glass-panel p-6">
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/10 text-gold">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold">
                   <Icon size={20} />
                 </span>
-                <p className="mt-5 text-[10px] uppercase tracking-[0.34em] text-white/40">{card.title}</p>
+                <p className="mt-5 text-[10px] uppercase tracking-[0.34em] text-white/42">{card.title}</p>
                 <p className="mt-3 text-lg text-white">{card.value}</p>
               </div>
             );
@@ -57,13 +57,13 @@ export default function Contact() {
             <div className="glass-panel p-8">
               <SectionHeader
                 eyebrow="Business Hours"
-                title="Use this panel for operating hours, direct messaging, and helpful studio details."
-                description="It keeps the contact page practical while preserving the premium visual tone."
+                title="Business hours, direct contact options, and quick ways to reach the studio."
+                description="If you are ready to plan a shoot, we are happy to guide you on dates, packages, and next steps."
               />
               <div className="mt-8 space-y-4 text-sm text-white/68">
                 {businessHours.map((item) => (
                   <div key={item.day} className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
-                    <span className="flex items-center gap-2 uppercase tracking-[0.22em] text-white/42">
+                    <span className="flex items-center gap-2 uppercase tracking-[0.22em] text-white/46">
                       <Clock3 size={14} className="text-gold" />
                       {item.day}
                     </span>
@@ -87,7 +87,7 @@ export default function Contact() {
                       href={social.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/75 transition hover:border-gold/40 hover:text-gold"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-3 text-sm text-white/78 transition hover:border-gold/40 hover:text-gold"
                     >
                       <Icon size={16} />
                       {social.label}
@@ -102,18 +102,20 @@ export default function Contact() {
 
       <SectionWrapper tone="light">
         <div className="light-panel p-8 sm:p-10 lg:p-14">
-          <p className="text-[10px] uppercase tracking-[0.34em] text-gold">Map Placeholder</p>
-          <h2 className="mt-5 font-display text-4xl sm:text-5xl">Future Google Map or studio location panel goes here.</h2>
+          <p className="text-[10px] uppercase tracking-[0.34em] text-gold">Location</p>
+          <h2 className="mt-5 font-display text-4xl sm:text-5xl">
+            Serving Lagos and available for studio, outdoor, event, and destination bookings.
+          </h2>
           <p className="mt-4 max-w-2xl text-base leading-8 text-charcoal/72">
-            This reserved space makes the starter scaffold easy to upgrade once the final public studio address is ready.
+            This section can later hold an embedded map, a pickup point, or your full public studio address once it is finalized.
           </p>
         </div>
       </SectionWrapper>
 
       <CTASection
-        eyebrow="Need a Fast Reply"
+        eyebrow="Need A Fast Reply"
         title="Use WhatsApp or the contact form to start the conversation today."
-        description="The contact page is structured to reduce friction and keep the path to inquiry simple."
+        description="Whether you are booking a session or asking a question, we are ready to help you plan the right next step."
         primaryAction={{ label: 'Book a Session', to: '/booking' }}
         secondaryAction={{ label: 'View Portfolio', to: '/portfolio' }}
         image="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?auto=format&fit=crop&w=1600&q=80"
@@ -121,4 +123,3 @@ export default function Contact() {
     </>
   );
 }
-

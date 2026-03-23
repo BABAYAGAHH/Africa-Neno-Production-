@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { Link, NavLink, useLocation } from 'react-router';
-import { navLinks, studioName } from '../data/site';
+import BrandLogo from './BrandLogo';
+import { navLinks } from '../data/site';
 
 export default function Navbar() {
   const location = useLocation();
@@ -24,20 +25,14 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="section-shell py-4">
         <div
-          className={`flex items-center justify-between rounded-full border px-4 py-3 transition duration-300 sm:px-6 ${
+          className={`flex items-center justify-between gap-4 rounded-[30px] border px-4 py-3 transition duration-300 sm:px-6 ${
             isScrolled
-              ? 'border-white/10 bg-[#111111]/76 shadow-soft backdrop-blur-xl'
-              : 'border-transparent bg-transparent'
+              ? 'border-brand-deep/10 bg-white/92 shadow-soft backdrop-blur-xl'
+              : 'border-white/70 bg-white/80 shadow-[0_20px_50px_rgba(11,51,23,0.08)] backdrop-blur-xl'
           }`}
         >
-          <Link to="/" className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/35 bg-gold/10 font-display text-xl text-gold">
-              AN
-            </span>
-            <div>
-              <p className="font-display text-2xl leading-none text-white">{studioName}</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.35em] text-white/40">Photography Studio</p>
-            </div>
+          <Link to="/" className="shrink-0">
+            <BrandLogo imageClassName="h-10 max-w-[170px] sm:h-11 sm:max-w-[210px]" />
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">
@@ -47,7 +42,7 @@ export default function Navbar() {
                 to={link.to}
                 className={({ isActive }) =>
                   `text-sm font-medium uppercase tracking-[0.22em] transition ${
-                    isActive ? 'text-gold' : 'text-white/68 hover:text-white'
+                    isActive ? 'text-brand-deep' : 'text-charcoal/68 hover:text-brand-deep'
                   }`
                 }
               >
@@ -66,7 +61,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setIsOpen((current) => !current)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:border-gold/40 hover:text-gold lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-deep/10 bg-brand-soft/70 text-brand-deep transition hover:border-brand/40 hover:bg-white lg:hidden"
             aria-label="Toggle navigation"
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -81,15 +76,16 @@ export default function Navbar() {
               exit={{ opacity: 0, y: -10 }}
               className="mt-4 lg:hidden"
             >
-              <div className="glass-panel p-6">
-                <nav className="flex flex-col gap-5">
+              <div className="light-panel p-6">
+                <BrandLogo imageClassName="h-10 max-w-[170px]" />
+                <nav className="mt-6 flex flex-col gap-5">
                   {navLinks.map((link) => (
                     <NavLink
                       key={link.to}
                       to={link.to}
                       className={({ isActive }) =>
-                        `flex items-center justify-between border-b border-white/10 pb-4 text-sm font-semibold uppercase tracking-[0.22em] ${
-                          isActive ? 'text-gold' : 'text-white/80'
+                        `flex items-center justify-between border-b border-brand-deep/8 pb-4 text-sm font-semibold uppercase tracking-[0.22em] ${
+                          isActive ? 'text-brand-deep' : 'text-charcoal/78'
                         }`
                       }
                     >
@@ -110,4 +106,3 @@ export default function Navbar() {
     </header>
   );
 }
-

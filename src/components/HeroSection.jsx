@@ -1,6 +1,7 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
+import BrandLogo from './BrandLogo';
 import { heroContent, stats } from '../data/site';
 
 export default function HeroSection() {
@@ -12,8 +13,8 @@ export default function HeroSection() {
           alt="Premium photography studio"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-[#111111]/90 to-[#111111]/62" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,169,107,0.16),transparent_30%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-darker/95 via-brand-deep/88 to-brand-deep/64" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(144,190,66,0.24),transparent_34%)]" />
       </div>
 
       <div className="section-shell relative z-10 flex min-h-[calc(100vh-8rem)] items-center py-16">
@@ -24,11 +25,12 @@ export default function HeroSection() {
             transition={{ duration: 0.55, ease: 'easeOut' }}
             className="max-w-3xl"
           >
-            <span className="eyebrow">Luxury Modern Photography</span>
+            <BrandLogo className="w-fit" imageClassName="h-12 max-w-[220px] sm:h-14 sm:max-w-[260px]" />
+            <span className="eyebrow mt-8">Professional Photography Studio</span>
             <h1 className="mt-8 font-display text-5xl leading-[0.92] text-white sm:text-6xl lg:text-8xl">
               {heroContent.title}
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
               {heroContent.subtitle}
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -52,17 +54,18 @@ export default function HeroSection() {
             <div className="glass-panel p-7">
               <p className="text-[10px] uppercase tracking-[0.34em] text-gold">Studio Signature</p>
               <h2 className="mt-4 font-display text-3xl text-white sm:text-4xl">
-                Elegant visual storytelling for portraits, weddings, events, and premium personal moments.
+                Elegant photography for portraits, weddings, events, brands, and meaningful personal moments.
               </h2>
-              <p className="mt-4 text-sm leading-7 text-white/62">
-                A luxury-modern studio presence with rich imagery, refined editing, and a client-first experience from booking to delivery.
+              <p className="mt-4 text-sm leading-7 text-white/68">
+                We combine strong creative direction, polished retouching, and a smooth client experience from inquiry
+                to final delivery.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {stats.map((stat) => (
                 <div key={stat.label} className="glass-panel p-5">
                   <p className="font-display text-4xl text-white">{stat.value}</p>
-                  <p className="mt-2 text-xs uppercase tracking-[0.24em] text-white/45">{stat.label}</p>
+                  <p className="mt-2 text-xs uppercase tracking-[0.24em] text-white/48">{stat.label}</p>
                 </div>
               ))}
             </div>
