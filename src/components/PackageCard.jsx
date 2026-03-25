@@ -25,7 +25,7 @@ export default function PackageCard({ item, index = 0, tone = 'light' }) {
       <p className={`text-[10px] font-bold uppercase tracking-[0.26em] ${isLight ? 'text-charcoal/42' : 'text-white/48'}`}>
         Photography Package
       </p>
-      <h3 className="mt-4 font-display text-4xl leading-tight">{item.name}</h3>
+      <h3 className="mt-4 font-display text-[clamp(2rem,3vw,2.5rem)] leading-tight [overflow-wrap:anywhere]">{item.name}</h3>
       <div className="mt-5 flex flex-wrap items-end justify-between gap-4">
         <p className="text-3xl font-bold text-brand-deep">{item.price}</p>
         <span className={`rounded-full px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] ${isLight ? 'bg-brand-soft text-brand-deep' : 'bg-white/10 text-brand-soft'}`}>

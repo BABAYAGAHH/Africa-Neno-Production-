@@ -34,7 +34,7 @@ export default function TestimonialCard({ item, index = 0, tone = 'light' }) {
       </p>
       <div className={`mt-8 flex items-end justify-between gap-4 border-t pt-5 ${isLight ? 'border-brand-deep/8' : 'border-white/10'}`}>
         <div>
-          <h3 className="font-display text-3xl">{item.name}</h3>
+          <h3 className="font-display text-[clamp(1.8rem,2.6vw,2.4rem)] leading-tight [overflow-wrap:anywhere]">{item.name}</h3>
           <p className={`mt-1 text-[11px] font-bold uppercase tracking-[0.2em] ${isLight ? 'text-charcoal/48' : 'text-white/52'}`}>
             {item.service}
           </p>

@@ -94,7 +94,7 @@ export default function Packages() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper>
+      <SectionWrapper tone="dark">
         <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
           <div className="glass-panel p-8 sm:p-10">
             <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-soft">Custom Quotes</p>

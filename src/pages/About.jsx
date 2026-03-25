@@ -73,7 +73,7 @@ export default function About() {
                 </span>
               ))}
             </div>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {studioFacts.map((item) => (
                 <div key={item.label} className="premium-card-light p-5">
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-deep/46">{item.label}</p>
@@ -86,7 +86,7 @@ export default function About() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper>
+      <SectionWrapper tone="dark">
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="glass-panel p-8 sm:p-10">
             <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-soft">Mission</p>

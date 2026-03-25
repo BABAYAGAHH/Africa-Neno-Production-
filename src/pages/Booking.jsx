@@ -37,7 +37,7 @@ export default function Booking() {
         image={brandImages.bookingHero}
       />
 
-      <SectionWrapper>
+      <SectionWrapper tone="dark">
         <div className="grid gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="glass-panel p-8 sm:p-10">
             <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-soft">How Booking Works</p>

@@ -51,11 +51,11 @@ export default function HeroSection() {
                 <ArrowRight size={16} />
               </Link>
             </div>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 2xl:grid-cols-4">
               {stats.map((stat) => (
-                <div key={stat.label} className="premium-card-light p-5">
-                  <p className="font-display text-4xl text-brand-deep">{stat.value}</p>
-                  <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-charcoal/52">
+                <div key={stat.label} className="premium-card-light h-full min-h-[8.75rem] p-5 sm:p-6">
+                  <p className="font-display text-[clamp(2rem,5vw,2.75rem)] leading-[0.92] text-brand-deep [overflow-wrap:anywhere]">{stat.value}</p>
+                  <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-charcoal/52 [overflow-wrap:anywhere]">
                     {stat.label}
                   </p>
                 </div>

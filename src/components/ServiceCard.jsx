@@ -50,7 +50,7 @@ export default function ServiceCard({ service, index = 0 }) {
         <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-deep/48">
           Premium Coverage
         </p>
-        <h3 className="mt-3 font-display text-4xl leading-tight text-charcoal">{service.title}</h3>
+        <h3 className="mt-3 font-display text-[clamp(2rem,3vw,2.5rem)] leading-tight text-charcoal [overflow-wrap:anywhere]">{service.title}</h3>
         <p className="mt-4 text-sm leading-8 text-charcoal/66">{service.description}</p>
         <div className="mt-6 space-y-3 text-sm text-charcoal/58">
           <p className="flex items-center gap-3"><span className="h-2 w-2 rounded-full bg-brand" /> Guided art direction included</p>
