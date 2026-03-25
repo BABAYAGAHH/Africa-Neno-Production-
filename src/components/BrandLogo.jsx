@@ -1,12 +1,12 @@
 import logo from '../assets/africa-neno-logo.svg';
-import { studioName } from '../data/site';
+import { brandSignature, studioName } from '../data/site';
 
 export default function BrandLogo({
   className = '',
   imageClassName = '',
   showName = false,
   showSubtitle = false,
-  subtitle = 'Lagos, Nigeria • Portraits, Weddings & Events',
+  subtitle = brandSignature,
   nameClassName = '',
   subtitleClassName = '',
 }) {

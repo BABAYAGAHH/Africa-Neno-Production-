@@ -69,7 +69,7 @@ export const services = [
     id: 'outdoor-photography',
     title: 'Outdoor Photography',
     description:
-      'Location sessions across Lagos and beyond with natural movement, environmental character, and cinematic balance.',
+      'Location sessions across Agbor, Asaba, Delta State, and beyond with natural movement, environmental character, and cinematic balance.',
     icon: 'MapPin',
     image: brandImages.outdoorCouple,
   },

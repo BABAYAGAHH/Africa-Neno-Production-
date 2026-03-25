@@ -5,7 +5,7 @@ import PageHero from '../components/PageHero';
 import SectionHeader from '../components/SectionHeader';
 import SectionWrapper from '../components/SectionWrapper';
 import { brandImages } from '../data/media';
-import { aboutShortCopy, coreValues, mission, setPageMeta, teamMembers, vision } from '../data/site';
+import { aboutShortCopy, address, coreValues, locationLabel, mission, phone, setPageMeta, teamMembers, vision, yearEstablished } from '../data/site';
 
 const studioPrinciples = [
   {
@@ -24,6 +24,12 @@ const studioPrinciples = [
     title: 'Business-Class Delivery',
     description: 'The final gallery is curated carefully so the whole experience feels complete, polished, and reliable.',
   },
+];
+
+const studioFacts = [
+  { label: 'Year Established', value: yearEstablished },
+  { label: 'Studio Base', value: locationLabel },
+  { label: 'Direct Line', value: phone },
 ];
 
 export default function About() {
@@ -58,7 +64,7 @@ export default function About() {
               tone="light"
             />
             <p className="mt-6 text-sm leading-8 text-charcoal/66">
-              Africa Neno Production was created to serve clients who want more than pretty images. We focus on structure, taste, communication, and finishing, because those details are what make the final result feel truly premium.
+              AFRICA NENO PRODUCTION was created to serve clients who want more than pretty images. We focus on structure, taste, communication, and finishing, because those details are what make the final result feel truly premium.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               {coreValues.map((value) => (
@@ -67,6 +73,15 @@ export default function About() {
                 </span>
               ))}
             </div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              {studioFacts.map((item) => (
+                <div key={item.label} className="premium-card-light p-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-deep/46">{item.label}</p>
+                  <p className="mt-3 text-sm leading-7 text-charcoal/72">{item.value}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-sm leading-8 text-charcoal/66">{address}</p>
           </div>
         </div>
       </SectionWrapper>

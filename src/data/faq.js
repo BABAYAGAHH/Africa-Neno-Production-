@@ -1,15 +1,15 @@
 export const faq = [
   {
     id: 'book-session',
-    question: 'How do I book a session with Africa Neno Production?',
+    question: 'How do I book a session with AFRICA NENO PRODUCTION?',
     answer:
       'You can submit the booking form, send a WhatsApp message, or contact the studio directly. We will confirm availability, ask a few planning questions, and guide you to the right package or custom quote.',
   },
   {
     id: 'travel',
-    question: 'Do you travel outside Lagos for shoots and events?',
+    question: 'Do you travel outside Agbor for shoots and events?',
     answer:
-      'Yes. We are based in Lagos and available for destination sessions, interstate weddings, and corporate assignments across Nigeria. Travel costs and logistics are added based on location and coverage needs.',
+      'Yes. We are based in Agbor, Delta State and available for destination sessions, interstate weddings, and assignments across Nigeria. Travel costs and logistics are added based on location and coverage needs.',
   },
   {
     id: 'delivery',

@@ -1,29 +1,29 @@
 import { useEffect } from 'react';
-import { Clock3, Facebook, Instagram, Mail, MapPin, MessageCircle, Phone, Youtube } from 'lucide-react';
+import { Clock3, Facebook, Instagram, Mail, MapPin, MessageCircle, Music2, Phone } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import CTASection from '../components/CTASection';
 import PageHero from '../components/PageHero';
 import SectionHeader from '../components/SectionHeader';
 import SectionWrapper from '../components/SectionWrapper';
 import { brandImages } from '../data/media';
-import { address, businessHours, email, phone, setPageMeta, socialLinks, whatsappLink } from '../data/site';
+import { address, businessHours, email, locationLabel, phone, setPageMeta, socialLinks, whatsappDisplay, whatsappLink, yearEstablished } from '../data/site';
 
 const iconMap = {
   Instagram,
   Facebook,
-  YouTube: Youtube,
+  TikTok: Music2,
 };
 
 const contactCards = [
   { title: 'Phone', value: phone, icon: Phone },
-  { title: 'WhatsApp', value: '+234 803 000 0000', icon: MessageCircle },
+  { title: 'WhatsApp', value: whatsappDisplay, icon: MessageCircle },
   { title: 'Email', value: email, icon: Mail },
-  { title: 'Base', value: address, icon: MapPin },
+  { title: 'Base', value: locationLabel, icon: MapPin },
 ];
 
 const serviceAreas = [
-  'Lagos studio and outdoor sessions',
-  'Wedding and event coverage across major Nigerian cities',
+  'Agbor studio and outdoor sessions',
+  'Wedding and event coverage across Delta State and major Nigerian cities',
   'Founder, team, and brand shoots for modern businesses',
   'Destination and travel-ready bookings on request',
 ];
@@ -39,7 +39,7 @@ export default function Contact() {
       <PageHero
         eyebrow="Contact"
         title="Talk to the studio about your next session, event, or brand production."
-        description="Use the contact form, email, phone, or WhatsApp to reach Africa Neno Production quickly and confidently."
+        description="Use the contact form, email, phone, or WhatsApp to reach AFRICA NENO PRODUCTION quickly and confidently."
         image={brandImages.contactHero}
       />
 
@@ -82,6 +82,10 @@ export default function Contact() {
                   </div>
                 ))}
               </div>
+              <div className="mt-6 rounded-[22px] border border-brand-deep/8 bg-white px-5 py-4 text-sm text-charcoal/72">
+                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-charcoal/42">Year Established</p>
+                <p className="mt-2">{yearEstablished}</p>
+              </div>
               <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-secondary mt-8 gap-2">
                 <MessageCircle size={16} />
                 Chat on WhatsApp
@@ -117,7 +121,7 @@ export default function Contact() {
           <div className="glass-panel p-8 sm:p-10">
             <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-soft">Where We Work</p>
             <h2 className="mt-4 font-display text-4xl leading-tight text-white sm:text-5xl">
-              Serving Lagos and available for bookings across Nigeria.
+              Based in {locationLabel} and available for bookings across Nigeria.
             </h2>
             <p className="mt-5 text-base leading-8 text-white/72">
               We work across studio sessions, outdoor productions, weddings, events, and commercial assignments, with travel available where the story and schedule call for it.
@@ -129,6 +133,9 @@ export default function Contact() {
                 <p className="text-sm leading-8 text-white/74">{item}</p>
               </div>
             ))}
+            <div className="rounded-[26px] border border-white/12 bg-white/8 p-6 backdrop-blur-sm">
+              <p className="text-sm leading-8 text-white/74">{address}</p>
+            </div>
           </div>
         </div>
       </SectionWrapper>

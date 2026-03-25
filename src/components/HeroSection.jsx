@@ -3,7 +3,7 @@ import { ArrowRight, BadgeCheck, MapPin } from 'lucide-react';
 import { Link } from 'react-router';
 import BrandLogo from './BrandLogo';
 import { brandImages } from '../data/media';
-import { brandHighlights, heroContent, stats } from '../data/site';
+import { brandHighlights, brandSignature, heroContent, locationLabel, stats } from '../data/site';
 
 export default function HeroSection() {
   return (
@@ -20,7 +20,7 @@ export default function HeroSection() {
             <BrandLogo
               showName
               showSubtitle
-              subtitle="Lagos, Nigeria • Portraits, Weddings & Events"
+              subtitle={brandSignature}
               imageClassName="h-16 sm:h-20"
               nameClassName="text-brand-deep text-xl sm:text-3xl"
               subtitleClassName="text-brand-deep/58"
@@ -28,7 +28,7 @@ export default function HeroSection() {
             <div className="mt-8 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-full border border-brand-deep/10 bg-white/84 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-deep/72 shadow-[0_18px_34px_rgba(14,44,22,0.06)]">
                 <MapPin size={14} />
-                Lagos, Nigeria
+                {locationLabel}
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-brand-deep/10 bg-white/84 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-deep/72 shadow-[0_18px_34px_rgba(14,44,22,0.06)]">
                 <BadgeCheck size={14} />

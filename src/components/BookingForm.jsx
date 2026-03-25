@@ -9,7 +9,7 @@ const initialForm = {
   emailAddress: '',
   serviceType: 'Portrait Photography',
   preferredDate: '',
-  preferredLocation: 'Lagos',
+  preferredLocation: 'Agbor, Delta State',
   packageType: 'Signature Story',
   message: '',
 };
@@ -66,11 +66,11 @@ export default function BookingForm() {
           </label>
           <label className="field-label">
             <span>Phone Number</span>
-            <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} className="field-input-light" required placeholder="0803 000 0000" />
+            <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} className="field-input-light" required placeholder="0903 976 0469" />
           </label>
           <label className="field-label">
             <span>Email Address</span>
-            <input type="email" name="emailAddress" value={formData.emailAddress} onChange={handleChange} className="field-input-light" required placeholder="you@example.com" />
+            <input type="email" name="emailAddress" value={formData.emailAddress} onChange={handleChange} className="field-input-light" required placeholder="Africanenoprodtv@gmail.com" />
           </label>
           <label className="field-label">
             <span>Service Type</span>
@@ -89,7 +89,7 @@ export default function BookingForm() {
           </label>
           <label className="field-label">
             <span>Preferred Location</span>
-            <input type="text" name="preferredLocation" value={formData.preferredLocation} onChange={handleChange} className="field-input-light" required placeholder="Lagos, studio, or event venue" />
+            <input type="text" name="preferredLocation" value={formData.preferredLocation} onChange={handleChange} className="field-input-light" required placeholder="Agbor, Asaba, studio, or event venue" />
           </label>
           <label className="field-label sm:col-span-2">
             <span>Preferred Package</span>

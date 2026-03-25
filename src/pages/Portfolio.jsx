@@ -52,7 +52,7 @@ export default function Portfolio() {
           <div className="overflow-hidden rounded-[32px] border border-brand-deep/8 bg-white p-3 shadow-soft">
             <img
               src={brandImages.outdoorCouple}
-              alt="African couple photographed outdoors in Lagos"
+              alt="African couple photographed outdoors in Delta State"
               className="aspect-[4/4.9] h-full w-full rounded-[26px] object-cover"
             />
           </div>

@@ -1,17 +1,30 @@
-export const studioName = 'Africa Neno Production';
-export const tagline = 'Premium portrait, wedding, event, and brand photography shaped in Lagos for modern Nigerian clients.';
-export const phone = '+234 803 000 0000';
-export const email = 'hello@africanenoproduction.com';
-export const address = 'Lagos, Nigeria';
-export const whatsappNumber = '2348030000000';
-export const whatsappMessage = 'Hello, I would like to plan a session with Africa Neno Production.';
+export const studioName = 'AFRICA NENO PRODUCTION';
+export const yearEstablished = '14/12/2025';
+export const phone = '09039760469';
+export const email = 'Africanenoprodtv@gmail.com';
+export const address = 'No. 183 Old Lagos Asaba Rd, beside Access Bank, Agbor, Delta State, Nigeria.';
+export const locationLabel = 'Agbor, Delta State';
+export const brandSignature = 'Agbor, Delta State • Portraits, Weddings & Events';
+export const whatsappNumber = '2349061293510';
+export const whatsappDisplay = '0906 129 3510';
+export const whatsappMessage = 'Hello, I would like to plan a session with AFRICA NENO PRODUCTION.';
+export const tagline = 'Premium portrait, wedding, event, and brand photography studio based in Agbor, Delta State, serving modern Nigerian clients with polished visual storytelling and calm creative direction.';
 export const seoDescription =
-  'Africa Neno Production is a Lagos-based premium photography studio for portraits, weddings, events, families, and polished brand visuals across Nigeria.';
+  'AFRICA NENO PRODUCTION is a premium photography studio based in Agbor, Delta State, Nigeria, creating portraits, weddings, events, families, and polished brand visuals across the country.';
 
 export const socialLinks = [
-  { label: 'Instagram', href: 'https://instagram.com' },
-  { label: 'Facebook', href: 'https://facebook.com' },
-  { label: 'YouTube', href: 'https://youtube.com' },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/africanenoprodtv?igsh=MXBtOHNpYjExbDc2eg==',
+  },
+  {
+    label: 'TikTok',
+    href: 'https://www.tiktok.com/@africanenoprodtv?_r=1&_t=ZS-94VokavQgVg',
+  },
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/share/1CGG9cm6Up/?mibextid=wwXIfr',
+  },
 ];
 
 export const navLinks = [
@@ -28,7 +41,7 @@ export const navLinks = [
 export const heroContent = {
   title: 'Nigerian stories, photographed with elegance and intention.',
   subtitle:
-    'From Lagos portraits and weddings to refined event and brand imagery, we create polished visuals with calm direction, premium finishing, and a client experience that feels beautifully organised from start to finish.',
+    'From Agbor portraits and weddings to refined event and brand imagery across Nigeria, we create polished visuals with calm direction, premium finishing, and a client experience that feels beautifully organised from start to finish.',
   primaryCta: 'View Portfolio',
   secondaryCta: 'Book A Session',
 };
@@ -40,16 +53,16 @@ export const ctaContent = {
 };
 
 export const aboutShortCopy =
-  'Africa Neno Production is a Lagos-based premium photography studio creating portraits, weddings, events, family sessions, and polished brand visuals for modern Nigerian clients who value clarity, style, and intentional storytelling.';
+  'AFRICA NENO PRODUCTION is a premium photography studio based in Agbor, Delta State, creating portraits, weddings, events, family sessions, and polished brand visuals for Nigerian clients who value clarity, style, and intentional storytelling.';
 
 export const servicesShortCopy =
   'We deliver studio, outdoor, wedding, event, family, and brand photography with calm creative direction, reliable communication, and beautifully refined finishing.';
 
 export const brandHighlights = [
   {
-    title: 'Lagos-Based Creative Direction',
+    title: 'Delta State Studio Presence',
     description:
-      'Every session is shaped with strong art direction, clean posing guidance, and a locally relevant sense of style.',
+      'Every session is shaped with strong art direction, clean posing guidance, and a locally relevant sense of style rooted in the Nigerian market.',
   },
   {
     title: 'Premium Retouching Standards',
@@ -64,15 +77,15 @@ export const brandHighlights = [
   {
     title: 'Coverage Across Nigeria',
     description:
-      'We work from Lagos and support portrait, wedding, event, and commercial assignments across key Nigerian cities.',
+      'We work from Agbor and support portrait, wedding, event, and commercial assignments across key Nigerian cities.',
   },
 ];
 
 export const stats = [
-  { label: 'Sessions Directed', value: '150+' },
-  { label: 'Based In', value: 'Lagos' },
-  { label: 'Preview Turnaround', value: '72hrs' },
-  { label: 'Travel Availability', value: 'Nationwide' },
+  { label: 'Established', value: '2025' },
+  { label: 'Studio Base', value: 'Agbor' },
+  { label: 'Reply Time', value: '24hrs' },
+  { label: 'Coverage', value: 'Nationwide' },
 ];
 
 export const whyChooseUs = [

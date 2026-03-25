@@ -3,7 +3,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { Link, NavLink, useLocation } from 'react-router';
 import BrandLogo from './BrandLogo';
-import { navLinks } from '../data/site';
+import { brandSignature, navLinks } from '../data/site';
+
+const desktopNavLinks = navLinks.filter((link) => link.to !== '/booking');
 
 export default function Navbar() {
   const location = useLocation();
@@ -31,21 +33,24 @@ export default function Navbar() {
               : 'border-white/70 bg-white/80 shadow-[0_20px_60px_rgba(14,44,22,0.08)] backdrop-blur-xl'
           }`}
         >
-          <div className="flex items-center gap-3 px-4 py-3 sm:px-5 lg:px-6">
+          <div className="flex items-center gap-3 px-4 py-3 sm:px-5 lg:px-6 xl:gap-4 2xl:gap-5">
             <Link to="/" className="min-w-0 flex-1 xl:flex-none">
               <BrandLogo
                 showName
                 showSubtitle
-                subtitle="Lagos, Nigeria • Portraits, Weddings & Events"
-                imageClassName="h-14 sm:h-16 xl:h-14"
-                nameClassName="text-brand-deep text-[0.95rem] sm:text-xl xl:text-[1.35rem]"
+                subtitle={brandSignature}
+                imageClassName="h-14 sm:h-16 xl:h-12 2xl:h-14"
+                nameClassName="text-brand-deep text-[0.95rem] sm:text-xl xl:text-[1.14rem] 2xl:text-[1.35rem]"
                 subtitleClassName="hidden text-brand-deep/52 2xl:block"
               />
             </Link>
 
-            <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 xl:flex">
-              <nav aria-label="Primary navigation" className="flex min-w-0 items-center gap-1 rounded-full border border-brand-deep/10 bg-brand-soft/45 p-1.5">
-                {navLinks.map((link) => (
+            <div className="hidden min-w-0 flex-1 items-center justify-end gap-3 xl:flex 2xl:gap-4">
+              <nav
+                aria-label="Primary navigation"
+                className="flex min-w-0 max-w-full flex-1 items-center justify-end gap-1 overflow-x-auto rounded-full border border-brand-deep/10 bg-brand-soft/45 p-1.5"
+              >
+                {desktopNavLinks.map((link) => (
                   <NavLink
                     key={link.to}
                     to={link.to}
@@ -61,7 +66,7 @@ export default function Navbar() {
                   </NavLink>
                 ))}
               </nav>
-              <Link to="/booking" className="btn-primary px-5 py-3 text-[0.72rem]">
+              <Link to="/booking" className="btn-primary shrink-0 px-4 py-3 text-[0.68rem] 2xl:px-5 2xl:text-[0.72rem]">
                 Book Now
                 <ArrowRight size={16} />
               </Link>

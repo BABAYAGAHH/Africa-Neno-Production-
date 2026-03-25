@@ -1,13 +1,13 @@
-import { Facebook, Instagram, Mail, MapPin, Phone, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Mail, MapPin, Music2, Phone } from 'lucide-react';
 import { Link } from 'react-router';
 import BrandLogo from './BrandLogo';
 import { services } from '../data/services';
-import { address, email, navLinks, phone, socialLinks, studioName, tagline } from '../data/site';
+import { address, brandSignature, email, locationLabel, navLinks, phone, socialLinks, studioName, tagline, yearEstablished } from '../data/site';
 
 const iconMap = {
   Instagram,
   Facebook,
-  YouTube: Youtube,
+  TikTok: Music2,
 };
 
 export default function Footer() {
@@ -20,7 +20,7 @@ export default function Footer() {
             <BrandLogo
               showName
               showSubtitle
-              subtitle="Lagos, Nigeria • Portraits, Weddings & Events"
+              subtitle={brandSignature}
               imageClassName="h-16 sm:h-20"
               nameClassName="text-white text-xl sm:text-3xl"
               subtitleClassName="text-white/52"
@@ -30,8 +30,8 @@ export default function Footer() {
             </h2>
             <p className="mt-5 max-w-md text-sm leading-8 text-white/68">{tagline}</p>
             <div className="mt-6 flex flex-wrap gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-soft">
-              <span className="rounded-full border border-white/12 bg-white/6 px-4 py-2">Lagos Based</span>
-              <span className="rounded-full border border-white/12 bg-white/6 px-4 py-2">Available Nationwide</span>
+              <span className="rounded-full border border-white/12 bg-white/6 px-4 py-2">Established {yearEstablished}</span>
+              <span className="rounded-full border border-white/12 bg-white/6 px-4 py-2">{locationLabel}</span>
             </div>
           </div>
 
@@ -86,7 +86,7 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs uppercase tracking-[0.2em] text-white/34 sm:flex-row sm:items-center sm:justify-between">
           <p>(c) {new Date().getFullYear()} {studioName}. All rights reserved.</p>
-          <p>Premium portraits, weddings, events, and brand visuals from Lagos.</p>
+          <p>Premium portraits, weddings, events, and brand visuals from {locationLabel}.</p>
         </div>
       </div>
     </footer>
