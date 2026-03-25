@@ -29,8 +29,8 @@ export default function Navbar() {
         <div
           className={`overflow-hidden rounded-[30px] border transition-all duration-300 ${
             isScrolled
-              ? 'border-brand-deep/12 bg-white/90 shadow-[0_26px_70px_rgba(14,44,22,0.12)] backdrop-blur-2xl'
-              : 'border-white/70 bg-white/80 shadow-[0_20px_60px_rgba(14,44,22,0.08)] backdrop-blur-xl'
+              ? 'border-white/10 bg-[linear-gradient(180deg,rgba(8,24,12,0.94)_0%,rgba(11,33,17,0.92)_100%)] shadow-[0_26px_70px_rgba(4,20,10,0.32)] backdrop-blur-2xl'
+              : 'border-white/10 bg-[linear-gradient(180deg,rgba(11,33,17,0.86)_0%,rgba(11,33,17,0.8)_100%)] shadow-[0_22px_64px_rgba(4,20,10,0.24)] backdrop-blur-xl'
           }`}
         >
           <div className="flex items-center gap-3 px-4 py-3 sm:px-5 lg:px-6 xl:gap-4 2xl:gap-5">
@@ -40,15 +40,15 @@ export default function Navbar() {
                 showSubtitle
                 subtitle={brandSignature}
                 imageClassName="h-14 sm:h-16 xl:h-12 2xl:h-14"
-                nameClassName="text-brand-deep text-[0.95rem] sm:text-xl xl:text-[1.14rem] 2xl:text-[1.35rem]"
-                subtitleClassName="hidden text-brand-deep/52 2xl:block"
+                nameClassName="text-white text-[0.95rem] sm:text-xl xl:text-[1.14rem] 2xl:text-[1.35rem]"
+                subtitleClassName="hidden text-white/56 2xl:block"
               />
             </Link>
 
             <div className="hidden min-w-0 flex-1 items-center justify-end gap-3 xl:flex 2xl:gap-4">
               <nav
                 aria-label="Primary navigation"
-                className="flex min-w-0 max-w-full flex-1 items-center justify-end gap-1 overflow-x-auto rounded-full border border-brand-deep/10 bg-brand-soft/45 p-1.5"
+                className="flex min-w-0 max-w-full flex-1 items-center justify-end gap-1 overflow-x-auto rounded-full border border-white/10 bg-white/6 p-1.5"
               >
                 {desktopNavLinks.map((link) => (
                   <NavLink
@@ -57,8 +57,8 @@ export default function Navbar() {
                     className={({ isActive }) =>
                       `rounded-full px-3 py-2 text-[11px] font-bold uppercase tracking-[0.18em] transition ${
                         isActive
-                          ? 'bg-brand-deep text-white shadow-[0_16px_30px_rgba(14,44,22,0.18)]'
-                          : 'text-charcoal/72 hover:bg-white hover:text-brand-deep'
+                          ? 'bg-brand text-brand-darker shadow-[0_16px_30px_rgba(93,143,71,0.22)]'
+                          : 'text-white/74 hover:bg-white/10 hover:text-white'
                       }`
                     }
                   >
@@ -75,7 +75,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setIsOpen((current) => !current)}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand-deep/10 bg-brand-soft/55 text-brand-deep shadow-[0_18px_34px_rgba(14,44,22,0.08)] hover:bg-white xl:hidden"
+              className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/6 text-brand-soft shadow-[0_18px_34px_rgba(4,20,10,0.18)] hover:bg-white/10 xl:hidden"
               aria-label="Toggle navigation"
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
@@ -92,11 +92,11 @@ export default function Navbar() {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.24, ease: 'easeOut' }}
-                className="border-t border-brand-deep/8 xl:hidden"
+                className="border-t border-white/8 xl:hidden"
               >
                 <div className="px-4 pb-4 pt-3 sm:px-5">
-                  <div className="light-panel p-5">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-deep/56">
+                  <div className="glass-panel p-5">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/58">
                       Navigate the studio
                     </p>
                     <nav aria-label="Mobile navigation" className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -107,8 +107,8 @@ export default function Navbar() {
                           className={({ isActive }) =>
                             `flex items-center justify-between rounded-[22px] border px-4 py-4 text-sm font-bold uppercase tracking-[0.16em] ${
                               isActive
-                                ? 'border-brand-deep bg-brand-deep text-white'
-                                : 'border-brand-deep/8 bg-white text-charcoal/76'
+                                ? 'border-brand bg-brand text-brand-darker'
+                                : 'border-white/12 bg-white/8 text-white/82'
                             }`
                           }
                         >

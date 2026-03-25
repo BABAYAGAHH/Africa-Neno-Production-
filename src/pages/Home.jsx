@@ -92,7 +92,7 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper>
+      <SectionWrapper tone="dark">
         <div className="grid gap-6 xl:grid-cols-[0.86fr_1.14fr] xl:items-start">
           <div className="glass-panel p-8 sm:p-10">
             <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-soft">Why Clients Choose Us</p>
@@ -135,12 +135,13 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper>
+      <SectionWrapper tone="dark">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeader
             eyebrow="Portfolio"
             title="A curated look at the moments, portraits, and brand visuals we create."
             description="Browse selected Nigerian wedding, portrait, family, product, and founder-focused imagery in a cleaner gallery experience."
+            tone="dark"
           />
           <Link to="/portfolio" className="btn-ghost self-start">View Full Portfolio</Link>
         </div>
@@ -166,12 +167,13 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper>
+      <SectionWrapper tone="dark">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader
             eyebrow="FAQ"
             title="Answers that help visitors feel informed, prepared, and ready to book."
             description="We keep the process simple, transparent, and easy to understand before production begins."
+            tone="dark"
           />
           <FAQAccordion items={faq} tone="dark" />
         </div>
