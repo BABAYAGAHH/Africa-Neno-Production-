@@ -1,15 +1,8 @@
-import {
-  Facebook,
-  Instagram,
-  Mail,
-  MapPin,
-  Phone,
-  Youtube,
-} from 'lucide-react';
+import { Facebook, Instagram, Mail, MapPin, Phone, Youtube } from 'lucide-react';
 import { Link } from 'react-router';
 import BrandLogo from './BrandLogo';
 import { services } from '../data/services';
-import { email, navLinks, phone, socialLinks, studioName, tagline, address } from '../data/site';
+import { address, email, navLinks, phone, socialLinks, studioName, tagline } from '../data/site';
 
 const iconMap = {
   Instagram,
@@ -19,32 +12,34 @@ const iconMap = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-brand/15 bg-[linear-gradient(180deg,#0d3919_0%,#082712_100%)] text-white">
-      <div className="section-shell py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+    <footer className="relative overflow-hidden border-t border-brand-deep/8 bg-[linear-gradient(180deg,#103019_0%,#0b2111_100%)] text-white">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(144,190,66,0.18),transparent_32%)]" />
+      <div className="section-shell relative py-16 sm:py-20">
+        <div className="grid gap-12 lg:grid-cols-[1.25fr_0.8fr_0.9fr_0.95fr]">
           <div>
             <BrandLogo
               showName
               showSubtitle
-              imageClassName="h-20 sm:h-24"
+              subtitle="Lagos, Nigeria • Portraits, Weddings & Events"
+              imageClassName="h-16 sm:h-20"
               nameClassName="text-white text-xl sm:text-3xl"
-              subtitleClassName="text-white/58"
+              subtitleClassName="text-white/52"
             />
-            <h2 className="mt-6 max-w-sm font-display text-4xl text-white sm:text-5xl">
-              Photography shaped with warmth, clarity, and timeless intention.
+            <h2 className="mt-7 max-w-sm font-display text-4xl leading-tight text-white sm:text-5xl">
+              Modern Nigerian photography with business-class care and timeless visual taste.
             </h2>
-            <p className="mt-5 max-w-md text-sm leading-7 text-white/68">{tagline}</p>
-            <p className="mt-3 max-w-md text-sm leading-7 text-white/58">
-              From portraits and weddings to events and brand visuals, we create imagery that feels polished,
-              natural, and memorable.
-            </p>
+            <p className="mt-5 max-w-md text-sm leading-8 text-white/68">{tagline}</p>
+            <div className="mt-6 flex flex-wrap gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-soft">
+              <span className="rounded-full border border-white/12 bg-white/6 px-4 py-2">Lagos Based</span>
+              <span className="rounded-full border border-white/12 bg-white/6 px-4 py-2">Available Nationwide</span>
+            </div>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-white/80">Quick Links</h3>
-            <div className="mt-6 flex flex-col gap-4">
+            <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/52">Explore</h3>
+            <div className="mt-6 grid gap-4">
               {navLinks.map((link) => (
-                <Link key={link.to} to={link.to} className="text-sm text-white/65 transition hover:text-gold">
+                <Link key={link.to} to={link.to} className="text-sm text-white/68 hover:text-brand-soft">
                   {link.label}
                 </Link>
               ))}
@@ -52,10 +47,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-white/80">Services</h3>
-            <div className="mt-6 flex flex-col gap-4">
+            <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/52">Specialties</h3>
+            <div className="mt-6 grid gap-4">
               {services.slice(0, 6).map((service) => (
-                <Link key={service.id} to="/services" className="text-sm text-white/65 transition hover:text-gold">
+                <Link key={service.id} to="/services" className="text-sm text-white/68 hover:text-brand-soft">
                   {service.title}
                 </Link>
               ))}
@@ -63,11 +58,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-white/80">Contact</h3>
-            <div className="mt-6 space-y-4 text-sm text-white/65">
-              <p className="flex items-start gap-3"><Phone size={16} className="mt-1 text-gold" /> {phone}</p>
-              <p className="flex items-start gap-3"><Mail size={16} className="mt-1 text-gold" /> {email}</p>
-              <p className="flex items-start gap-3"><MapPin size={16} className="mt-1 text-gold" /> {address}</p>
+            <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/52">Contact</h3>
+            <div className="mt-6 space-y-4 text-sm leading-7 text-white/68">
+              <p className="flex items-start gap-3"><Phone size={16} className="mt-1 text-brand-soft" /> {phone}</p>
+              <p className="flex items-start gap-3"><Mail size={16} className="mt-1 text-brand-soft" /> {email}</p>
+              <p className="flex items-start gap-3"><MapPin size={16} className="mt-1 text-brand-soft" /> {address}</p>
             </div>
             <div className="mt-8 flex items-center gap-3">
               {socialLinks.map((social) => {
@@ -79,7 +74,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={social.label}
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/8 text-white/78 transition hover:border-gold/40 hover:text-gold"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/8 text-white/78 hover:border-brand-soft/40 hover:text-brand-soft"
                   >
                     <Icon size={17} />
                   </a>
@@ -89,9 +84,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs uppercase tracking-[0.22em] text-white/35 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs uppercase tracking-[0.2em] text-white/34 sm:flex-row sm:items-center sm:justify-between">
           <p>(c) {new Date().getFullYear()} {studioName}. All rights reserved.</p>
-          <p>Portraits, weddings, events, and polished visual storytelling.</p>
+          <p>Premium portraits, weddings, events, and brand visuals from Lagos.</p>
         </div>
       </div>
     </footer>

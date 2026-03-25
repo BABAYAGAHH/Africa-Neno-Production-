@@ -1,98 +1,74 @@
-﻿export const portfolio = [
+import { brandImages } from './media';
+
+export const portfolio = [
   {
-    id: 'classic-wedding-moments',
-    title: 'Classic Wedding Moments',
+    id: 'traditional-introduction',
+    title: 'Traditional Elegance',
     category: 'Weddings',
-    image:
-      'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80',
-    description: 'Elegant wedding storytelling with timeless lighting and heartfelt details.',
+    image: brandImages.traditionalCouple,
+    description: 'A polished traditional look with strong styling, cultural detail, and elegant couple direction.',
   },
   {
-    id: 'studio-portrait-collection',
-    title: 'Studio Portrait Collection',
+    id: 'studio-led-portrait',
+    title: 'Studio-Led Portrait',
     category: 'Portraits',
-    image:
-      'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=1200&q=80',
-    description: 'Clean portrait composition designed for personality and polish.',
+    image: brandImages.heroPrimary,
+    description: 'Confident portrait work built around clean lighting, strong posture, and premium finishing.',
   },
   {
-    id: 'event-highlights',
-    title: 'Event Highlights',
-    category: 'Events',
-    image:
-      'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
-    description: 'Memorable event coverage with atmosphere, energy, and key moments.',
+    id: 'brand-founder-portrait',
+    title: 'Founder Brand Session',
+    category: 'Brand',
+    image: brandImages.heroTertiary,
+    description: 'Professional personal-brand imagery for business owners who need trust and polish online.',
   },
   {
-    id: 'family-lifestyle-session',
-    title: 'Family Lifestyle Session',
+    id: 'family-keepsake-frame',
+    title: 'Family Keepsake Frame',
     category: 'Family',
-    image:
-      'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=1200&q=80',
-    description: 'Warm and expressive family imagery with a relaxed premium feel.',
+    image: brandImages.familyMoment,
+    description: 'An intimate family moment photographed with tenderness and timeless presentation.',
   },
   {
-    id: 'editorial-studio-frame',
-    title: 'Editorial Studio Frame',
-    category: 'Studio',
-    image:
-      'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=1200&q=80',
-    description: 'Controlled studio work with strong shape, texture, and elegance.',
+    id: 'bridal-beauty-study',
+    title: 'Bridal Beauty Study',
+    category: 'Weddings',
+    image: brandImages.traditionalBride,
+    description: 'Close detail and premium styling focused on bridal presence, beauty, and texture.',
   },
   {
-    id: 'outdoor-sunset-session',
-    title: 'Outdoor Sunset Session',
+    id: 'outdoor-couple-story',
+    title: 'Outdoor Couple Story',
     category: 'Outdoor',
-    image:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80',
-    description: 'Golden-hour portraiture with movement and cinematic warmth.',
+    image: brandImages.outdoorCouple,
+    description: 'Soft outdoor portraiture with movement, intimacy, and natural environmental atmosphere.',
   },
   {
-    id: 'product-showcase',
-    title: 'Product Showcase',
-    category: 'Product',
-    image:
-      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80',
-    description: 'Luxury product photography built for modern brands and campaigns.',
-  },
-  {
-    id: 'modern-wedding-detail-story',
-    title: 'Modern Wedding Detail Story',
-    category: 'Weddings',
-    image:
-      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
-    description: 'A refined wedding gallery focused on detail, texture, and emotion.',
-  },
-  {
-    id: 'monochrome-portrait-study',
-    title: 'Monochrome Portrait Study',
-    category: 'Portraits',
-    image:
-      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
-    description: 'Minimalist portraiture with strong expression and editorial depth.',
-  },
-  {
-    id: 'celebration-energy',
-    title: 'Celebration Energy',
+    id: 'event-arrival-story',
+    title: 'Ceremony Arrival',
     category: 'Events',
-    image:
-      'https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1200&q=80',
-    description: 'Vibrant coverage that preserves movement, excitement, and emotion.',
+    image: brandImages.celebration,
+    description: 'Coverage designed to preserve high-energy entrances, guest reactions, and key event emotion.',
   },
   {
-    id: 'golden-hour-family-frames',
-    title: 'Golden Hour Family Frames',
-    category: 'Family',
-    image:
-      'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1200&q=80',
-    description: 'Natural family storytelling with atmosphere and warmth.',
-  },
-  {
-    id: 'brand-product-detail',
-    title: 'Brand Product Detail',
+    id: 'product-display-flatlay',
+    title: 'Luxury Product Display',
     category: 'Product',
-    image:
-      'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80',
-    description: 'Clean commercial frames designed for premium product presentation.',
+    image: brandImages.productFlatlay,
+    description: 'A clean product frame created for modern ecommerce, social campaigns, and premium launches.',
+  },
+  {
+    id: 'beauty-brand-closeup',
+    title: 'Beauty Brand Detail',
+    category: 'Product',
+    image: brandImages.beautyDetail,
+    description: 'Detail-driven imagery that helps beauty and lifestyle products look elevated and market-ready.',
+  },
+  {
+    id: 'campaign-product-story',
+    title: 'Campaign Product Story',
+    category: 'Brand',
+    image: brandImages.productDetail,
+    description: 'Commercial product visuals styled to feel premium, sharp, and easy to trust.',
   },
 ];

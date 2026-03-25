@@ -11,17 +11,11 @@ import SectionWrapper from '../components/SectionWrapper';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
 import { faq } from '../data/faq';
+import { brandImages } from '../data/media';
 import { packages } from '../data/packages';
 import { portfolio } from '../data/portfolio';
 import { services } from '../data/services';
-import {
-  aboutShortCopy,
-  ctaContent,
-  brandHighlights,
-  servicesShortCopy,
-  setPageMeta,
-  whyChooseUs,
-} from '../data/site';
+import { aboutShortCopy, ctaContent, servicesShortCopy, setPageMeta, whyChooseUs } from '../data/site';
 import { testimonials } from '../data/testimonials';
 
 const iconMap = {
@@ -33,6 +27,13 @@ const iconMap = {
   Sparkles,
 };
 
+const proofPoints = [
+  'Portrait sessions with art direction and premium retouching.',
+  'Wedding coverage that respects Nigerian culture, timing, and emotion.',
+  'Brand imagery for founders and businesses that need credibility online.',
+  'Clear communication from inquiry to final gallery delivery.',
+];
+
 export default function Home() {
   useEffect(() => {
     setPageMeta('Home | Africa Neno Production');
@@ -43,60 +44,87 @@ export default function Home() {
     <>
       <HeroSection />
 
-      <SectionWrapper className="relative z-10 -mt-20 pt-0">
-        <div className="grid gap-6 lg:grid-cols-4">
-          {brandHighlights.map((item, index) => (
-            <div key={item.title} className="glass-panel p-6">
-              <p className="text-[10px] uppercase tracking-[0.34em] text-gold">0{index + 1}</p>
-              <h3 className="mt-4 font-display text-3xl text-white">{item.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-white/68">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </SectionWrapper>
-
       <SectionWrapper tone="light">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="overflow-hidden rounded-[30px] shadow-soft">
+        <div className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+          <div className="overflow-hidden rounded-[32px] border border-brand-deep/8 bg-white p-3 shadow-soft">
             <img
-              src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?auto=format&fit=crop&w=1200&q=80"
-              alt="Studio portrait session"
-              className="h-full w-full object-cover"
+              src={brandImages.heroTertiary}
+              alt="African business woman in premium workspace"
+              className="aspect-[4/4.7] h-full w-full rounded-[26px] object-cover"
             />
           </div>
           <div>
             <SectionHeader
               eyebrow="About The Studio"
-              title="A studio experience that feels calm, polished, and unmistakably personal."
+              title="A premium photography experience built for modern Nigerian clients who care about quality."
               description={aboutShortCopy}
               tone="light"
             />
-            <Link to="/about" className="btn-light mt-8">Learn More</Link>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {proofPoints.map((point) => (
+                <div key={point} className="premium-card-light flex items-start gap-3 p-5">
+                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-soft text-brand-deep">
+                    <BadgeCheck size={14} />
+                  </span>
+                  <p className="text-sm leading-7 text-charcoal/68">{point}</p>
+                </div>
+              ))}
+            </div>
+            <Link to="/about" className="btn-secondary mt-8">Learn More</Link>
           </div>
         </div>
       </SectionWrapper>
 
-      <SectionWrapper>
+      <SectionWrapper tone="light">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeader
             eyebrow="Services"
-            title="Photography services built for milestones, portraits, brands, and beautifully documented events."
+            title="Portraits, weddings, events, families, and brand visuals handled with polish and care."
             description={servicesShortCopy}
+            tone="light"
           />
-          <Link to="/services" className="btn-secondary self-start">View All Services</Link>
+          <Link to="/services" className="btn-light self-start">View All Services</Link>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {services.slice(0, 8).map((service, index) => (
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {services.slice(0, 6).map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <div className="grid gap-6 xl:grid-cols-[0.86fr_1.14fr] xl:items-start">
+          <div className="glass-panel p-8 sm:p-10">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-soft">Why Clients Choose Us</p>
+            <h2 className="mt-4 font-display text-4xl leading-tight text-white sm:text-5xl">
+              A process built around clarity, comfort, and business-class execution.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-white/72">
+              Africa Neno Production blends creative taste with a smooth operational process, so clients feel guided, prepared, and proud of the result.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {whyChooseUs.slice(0, 4).map((item) => {
+              const Icon = iconMap[item.icon] || Sparkles;
+              return (
+                <div key={item.title} className="rounded-[26px] border border-white/12 bg-white/8 p-6 backdrop-blur-sm">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-[18px] bg-white/10 text-brand-soft">
+                    <Icon size={22} />
+                  </span>
+                  <h3 className="mt-5 font-display text-3xl text-white">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/72">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </SectionWrapper>
 
       <SectionWrapper tone="light">
         <SectionHeader
           eyebrow="Packages"
-          title="Simple package options that help clients choose with confidence."
-          description="Compare coverage, turnaround, and included features at a glance, then book the package that fits your moment best."
+          title="Clear package options that make premium photography easier to choose."
+          description="Compare coverage depth, image delivery, and the type of experience each package is designed to support."
           align="center"
           tone="light"
         />
@@ -111,65 +139,41 @@ export default function Home() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeader
             eyebrow="Portfolio"
-            title="A curated look at the moments, moods, and stories we have captured."
-            description="Browse selected work across portraits, events, weddings, family sessions, and brand imagery."
+            title="A curated look at the moments, portraits, and brand visuals we create."
+            description="Browse selected Nigerian wedding, portrait, family, product, and founder-focused imagery in a cleaner gallery experience."
           />
-          <Link to="/portfolio" className="btn-secondary self-start">View Full Portfolio</Link>
+          <Link to="/portfolio" className="btn-ghost self-start">View Full Portfolio</Link>
         </div>
         <div className="mt-12">
-          <GalleryGrid items={portfolio} limit={6} />
+          <GalleryGrid items={portfolio} limit={6} tone="dark" />
         </div>
       </SectionWrapper>
 
       <SectionWrapper tone="light">
-        <SectionHeader
-          eyebrow="Why Choose Us"
-          title="A premium process built around clarity, comfort, and beautifully finished results."
-          description="From direction and editing to communication and delivery, every part of the experience is designed to feel elevated."
-          align="center"
-          tone="light"
-        />
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {whyChooseUs.map((item) => {
-            const Icon = iconMap[item.icon] || Sparkles;
-            return (
-              <div key={item.title} className="light-panel p-7">
-                <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/12 text-gold">
-                  <Icon size={24} />
-                </span>
-                <h3 className="mt-5 font-display text-3xl">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-charcoal/68">{item.description}</p>
-              </div>
-            );
-          })}
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeader
-            eyebrow="Testimonials"
-            title="The kind words we receive matter just as much as the images we deliver."
-            description="Clients consistently mention the comfort of the process, the clarity of communication, and the polish of the final gallery."
+            eyebrow="Client Reviews"
+            title="Kind words from clients who trusted us with important personal and business moments."
+            description="Comfort, professionalism, and polished delivery show up repeatedly in the feedback we receive."
+            tone="light"
           />
-          <Link to="/testimonials" className="btn-secondary self-start">See All Reviews</Link>
+          <Link to="/testimonials" className="btn-light self-start">See All Reviews</Link>
         </div>
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {testimonials.slice(0, 3).map((item, index) => (
-            <TestimonialCard key={item.id} item={item} index={index} />
+            <TestimonialCard key={item.id} item={item} index={index} tone="light" />
           ))}
         </div>
       </SectionWrapper>
 
-      <SectionWrapper tone="light">
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+      <SectionWrapper>
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader
             eyebrow="FAQ"
-            title="Answers to the questions clients ask before they are ready to book."
-            description="Simple, clear answers help visitors feel informed, confident, and ready to take the next step."
-            tone="light"
+            title="Answers that help visitors feel informed, prepared, and ready to book."
+            description="We keep the process simple, transparent, and easy to understand before production begins."
           />
-          <FAQAccordion items={faq} tone="light" />
+          <FAQAccordion items={faq} tone="dark" />
         </div>
       </SectionWrapper>
 
@@ -179,7 +183,7 @@ export default function Home() {
         description="Africa Neno Production is ready to plan portraits, weddings, events, and custom visual sessions with you."
         primaryAction={{ label: ctaContent.primary, to: '/booking' }}
         secondaryAction={{ label: ctaContent.secondary, to: '/contact' }}
-        image="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80"
+        image={brandImages.ctaWedding}
       />
     </>
   );

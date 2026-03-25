@@ -11,7 +11,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 20);
+    const onScroll = () => setIsScrolled(window.scrollY > 18);
     onScroll();
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
@@ -23,97 +23,105 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="section-shell py-4">
+      <div className={`section-shell transition-all duration-300 ${isScrolled ? 'pt-3' : 'pt-4'}`}>
         <div
-          className={`flex items-center justify-between gap-4 rounded-[30px] border px-4 py-3 transition duration-300 sm:px-6 ${
+          className={`overflow-hidden rounded-[30px] border transition-all duration-300 ${
             isScrolled
-              ? 'border-brand-deep/10 bg-white/92 shadow-soft backdrop-blur-xl'
-              : 'border-white/70 bg-white/80 shadow-[0_20px_50px_rgba(11,51,23,0.08)] backdrop-blur-xl'
+              ? 'border-brand-deep/12 bg-white/90 shadow-[0_26px_70px_rgba(14,44,22,0.12)] backdrop-blur-2xl'
+              : 'border-white/70 bg-white/80 shadow-[0_20px_60px_rgba(14,44,22,0.08)] backdrop-blur-xl'
           }`}
         >
-          <Link to="/" className="min-w-0 shrink-0">
-            <BrandLogo
-              showName
-              showSubtitle
-              imageClassName="h-14 sm:h-16"
-              nameClassName="text-brand-deep text-base sm:text-[1.7rem]"
-              subtitleClassName="hidden text-brand-deep/58 sm:block"
-            />
-          </Link>
-
-          <nav className="hidden items-center gap-7 lg:flex">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                className={({ isActive }) =>
-                  `text-sm font-medium uppercase tracking-[0.22em] transition ${
-                    isActive ? 'text-brand-deep' : 'text-charcoal/68 hover:text-brand-deep'
-                  }`
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
-          </nav>
-
-          <div className="hidden lg:block">
-            <Link to="/booking" className="btn-primary gap-2">
-              Book a Session
-              <ArrowRight size={16} />
+          <div className="flex items-center gap-3 px-4 py-3 sm:px-5 lg:px-6">
+            <Link to="/" className="min-w-0 flex-1 xl:flex-none">
+              <BrandLogo
+                showName
+                showSubtitle
+                subtitle="Lagos, Nigeria • Portraits, Weddings & Events"
+                imageClassName="h-14 sm:h-16 xl:h-14"
+                nameClassName="text-brand-deep text-[0.95rem] sm:text-xl xl:text-[1.35rem]"
+                subtitleClassName="hidden text-brand-deep/52 2xl:block"
+              />
             </Link>
+
+            <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 xl:flex">
+              <nav aria-label="Primary navigation" className="flex min-w-0 items-center gap-1 rounded-full border border-brand-deep/10 bg-brand-soft/45 p-1.5">
+                {navLinks.map((link) => (
+                  <NavLink
+                    key={link.to}
+                    to={link.to}
+                    className={({ isActive }) =>
+                      `rounded-full px-3 py-2 text-[11px] font-bold uppercase tracking-[0.18em] transition ${
+                        isActive
+                          ? 'bg-brand-deep text-white shadow-[0_16px_30px_rgba(14,44,22,0.18)]'
+                          : 'text-charcoal/72 hover:bg-white hover:text-brand-deep'
+                      }`
+                    }
+                  >
+                    {link.label}
+                  </NavLink>
+                ))}
+              </nav>
+              <Link to="/booking" className="btn-primary px-5 py-3 text-[0.72rem]">
+                Book Now
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setIsOpen((current) => !current)}
+              className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand-deep/10 bg-brand-soft/55 text-brand-deep shadow-[0_18px_34px_rgba(14,44,22,0.08)] hover:bg-white xl:hidden"
+              aria-label="Toggle navigation"
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
+            >
+              {isOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setIsOpen((current) => !current)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-deep/10 bg-brand-soft/70 text-brand-deep transition hover:border-brand/40 hover:bg-white lg:hidden"
-            aria-label="Toggle navigation"
-          >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
-
-        <AnimatePresence>
-          {isOpen ? (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="mt-4 lg:hidden"
-            >
-              <div className="light-panel p-6">
-                <BrandLogo
-                  showName
-                  showSubtitle
-                  imageClassName="h-14"
-                  nameClassName="text-brand-deep text-base"
-                  subtitleClassName="text-brand-deep/58"
-                />
-                <nav className="mt-6 flex flex-col gap-5">
-                  {navLinks.map((link) => (
-                    <NavLink
-                      key={link.to}
-                      to={link.to}
-                      className={({ isActive }) =>
-                        `flex items-center justify-between border-b border-brand-deep/8 pb-4 text-sm font-semibold uppercase tracking-[0.22em] ${
-                          isActive ? 'text-brand-deep' : 'text-charcoal/78'
-                        }`
-                      }
-                    >
-                      {link.label}
+          <AnimatePresence initial={false}>
+            {isOpen ? (
+              <motion.div
+                id="mobile-navigation"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.24, ease: 'easeOut' }}
+                className="border-t border-brand-deep/8 xl:hidden"
+              >
+                <div className="px-4 pb-4 pt-3 sm:px-5">
+                  <div className="light-panel p-5">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-deep/56">
+                      Navigate the studio
+                    </p>
+                    <nav aria-label="Mobile navigation" className="mt-5 grid gap-3 sm:grid-cols-2">
+                      {navLinks.map((link) => (
+                        <NavLink
+                          key={link.to}
+                          to={link.to}
+                          className={({ isActive }) =>
+                            `flex items-center justify-between rounded-[22px] border px-4 py-4 text-sm font-bold uppercase tracking-[0.16em] ${
+                              isActive
+                                ? 'border-brand-deep bg-brand-deep text-white'
+                                : 'border-brand-deep/8 bg-white text-charcoal/76'
+                            }`
+                          }
+                        >
+                          {link.label}
+                          <ArrowRight size={16} />
+                        </NavLink>
+                      ))}
+                    </nav>
+                    <Link to="/booking" className="btn-primary mt-5 w-full justify-center">
+                      Book A Session
                       <ArrowRight size={16} />
-                    </NavLink>
-                  ))}
-                </nav>
-                <Link to="/booking" className="btn-primary mt-6 w-full gap-2">
-                  Book a Session
-                  <ArrowRight size={16} />
-                </Link>
-              </div>
-            </motion.div>
-          ) : null}
-        </AnimatePresence>
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ) : null}
+          </AnimatePresence>
+        </div>
       </div>
     </header>
   );

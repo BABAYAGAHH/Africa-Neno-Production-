@@ -1,12 +1,12 @@
 export const studioName = 'Africa Neno Production';
-export const tagline = "Premium photography for life's most meaningful moments.";
-export const phone = '+234 800 000 0000';
+export const tagline = 'Premium portrait, wedding, event, and brand photography shaped in Lagos for modern Nigerian clients.';
+export const phone = '+234 803 000 0000';
 export const email = 'hello@africanenoproduction.com';
-export const address = 'Studio address coming soon, Lagos, Nigeria';
-export const whatsappNumber = '2348000000000';
-export const whatsappMessage = 'Hello, I would like to book a photography session.';
+export const address = 'Lagos, Nigeria';
+export const whatsappNumber = '2348030000000';
+export const whatsappMessage = 'Hello, I would like to plan a session with Africa Neno Production.';
 export const seoDescription =
-  'Premium photography studio offering portraits, weddings, events, family photography, and custom visual storytelling.';
+  'Africa Neno Production is a Lagos-based premium photography studio for portraits, weddings, events, families, and polished brand visuals across Nigeria.';
 
 export const socialLinks = [
   { label: 'Instagram', href: 'https://instagram.com' },
@@ -20,133 +20,121 @@ export const navLinks = [
   { label: 'Services', to: '/services' },
   { label: 'Packages', to: '/packages' },
   { label: 'Portfolio', to: '/portfolio' },
-  { label: 'Testimonials', to: '/testimonials' },
-  { label: 'Booking', to: '/booking' },
+  { label: 'Reviews', to: '/testimonials' },
+  { label: 'Book', to: '/booking' },
   { label: 'Contact', to: '/contact' },
 ];
 
 export const heroContent = {
-  title: 'Capturing Moments. Creating Timeless Memories.',
+  title: 'Nigerian stories, photographed with elegance and intention.',
   subtitle:
-    'Professional photography studio for portraits, weddings, events, family sessions, and premium visual storytelling.',
+    'From Lagos portraits and weddings to refined event and brand imagery, we create polished visuals with calm direction, premium finishing, and a client experience that feels beautifully organised from start to finish.',
   primaryCta: 'View Portfolio',
-  secondaryCta: 'Book a Session',
+  secondaryCta: 'Book A Session',
 };
 
 export const ctaContent = {
-  title: 'Ready to Capture Your Next Special Moment?',
-  primary: 'Book Now',
+  title: 'Start planning a session that feels elevated from the first conversation to the final gallery.',
+  primary: 'Book A Session',
   secondary: 'Contact Studio',
 };
 
 export const aboutShortCopy =
-  'Our studio is dedicated to creating timeless, expressive, and professionally crafted images. We combine creativity, technical excellence, and a smooth client experience in every session.';
+  'Africa Neno Production is a Lagos-based premium photography studio creating portraits, weddings, events, family sessions, and polished brand visuals for modern Nigerian clients who value clarity, style, and intentional storytelling.';
 
 export const servicesShortCopy =
-  "Whether it's a portrait, wedding, family session, event, or commercial shoot, we capture every detail with elegance and intention.";
+  'We deliver studio, outdoor, wedding, event, family, and brand photography with calm creative direction, reliable communication, and beautifully refined finishing.';
 
 export const brandHighlights = [
   {
-    title: 'Professional Studio Experience',
+    title: 'Lagos-Based Creative Direction',
     description:
-      'A calm, guided studio process shaped around lighting, direction, and premium presentation.',
+      'Every session is shaped with strong art direction, clean posing guidance, and a locally relevant sense of style.',
   },
   {
-    title: 'High-Quality Edited Photos',
+    title: 'Premium Retouching Standards',
     description:
-      'Every delivered gallery is polished with elegant color, clean retouching, and intentional curation.',
+      'Skin tones, colour balance, and finishing are handled with care so the final gallery feels rich, natural, and consistent.',
   },
   {
-    title: 'Indoor & Outdoor Sessions',
+    title: 'Structured Client Experience',
     description:
-      'From controlled studio scenes to natural-light outdoor storytelling, each session is tailored to you.',
+      'From inquiry to delivery, our workflow is calm, responsive, and built to keep every project organised.',
   },
   {
-    title: 'Personalized Packages',
+    title: 'Coverage Across Nigeria',
     description:
-      'Flexible options for portraits, events, weddings, and custom concepts with clear value and polish.',
+      'We work from Lagos and support portrait, wedding, event, and commercial assignments across key Nigerian cities.',
   },
 ];
 
 export const stats = [
-  { label: 'Sessions Completed', value: '120+' },
-  { label: 'Happy Clients', value: '75+' },
-  { label: 'Fast Delivery', value: '72hrs' },
-  { label: 'Premium Retouching', value: 'Included' },
+  { label: 'Sessions Directed', value: '150+' },
+  { label: 'Based In', value: 'Lagos' },
+  { label: 'Preview Turnaround', value: '72hrs' },
+  { label: 'Travel Availability', value: 'Nationwide' },
 ];
 
 export const whyChooseUs = [
   {
-    title: 'Creative Direction',
-    description: 'We guide posing, mood, composition, and styling so the final work feels intentional.',
+    title: 'Clear Art Direction',
+    description: 'We guide posture, expression, movement, and framing so clients feel confident on camera.',
     icon: 'Sparkles',
   },
   {
-    title: 'Professional Editing',
-    description: 'Refined post-production keeps your gallery clean, cinematic, and beautifully consistent.',
+    title: 'Refined Colour Work',
+    description: 'Your gallery is finished with balanced skin tones, elegant contrast, and premium retouching restraint.',
     icon: 'Aperture',
   },
   {
-    title: 'Timely Delivery',
-    description: 'Clear timelines and a streamlined workflow help you receive your images on schedule.',
+    title: 'Reliable Delivery',
+    description: 'Timelines are communicated clearly so you always know what happens next and when to expect it.',
     icon: 'Clock3',
   },
   {
-    title: 'Client-Centered Experience',
-    description: 'We create a relaxed environment that helps clients feel confident and comfortable.',
+    title: 'Comfortable Experience',
+    description: 'Our sessions are calm, respectful, and paced to help people relax and look their best.',
     icon: 'Heart',
   },
   {
-    title: 'Flexible Packages',
-    description: 'Choose from polished packages or request a custom quote built around your needs.',
+    title: 'Flexible Coverage',
+    description: 'Choose a streamlined package or ask us to tailor coverage for a bigger event or brand need.',
     icon: 'Layers3',
   },
   {
-    title: 'Quality Imagery',
-    description: 'Every gallery is designed to feel premium, timeless, and ready to share proudly.',
+    title: 'Business-Class Presentation',
+    description: 'Every touchpoint, from inquiry forms to final galleries, is designed to feel polished and trustworthy.',
     icon: 'BadgeCheck',
   },
 ];
 
 export const mission =
-  "To provide premium photography services that preserve life's most important moments with creativity, professionalism, and excellence.";
+  'To produce refined Nigerian photography experiences that combine creative excellence, organised delivery, and imagery clients are proud to keep, print, and share.';
 
 export const vision =
-  'To become a trusted photography brand known for timeless imagery, exceptional client experience, and artistic storytelling.';
+  'To become one of the most trusted premium photography studios in Nigeria for elegant storytelling, strong client care, and timeless visual quality.';
 
-export const coreValues = [
-  'Creativity',
-  'Excellence',
-  'Professionalism',
-  'Reliability',
-  'Attention to Detail',
-];
+export const coreValues = ['Craft', 'Calm', 'Clarity', 'Taste', 'Reliability'];
 
 export const teamMembers = [
   {
     name: 'Lead Photographer',
-    role: 'Directs sessions and captures the signature Africa Neno Production visual tone.',
-    image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80',
+    role: 'Directs portrait, wedding, and event coverage with confident composition and calm client guidance.',
   },
   {
-    name: 'Creative Director',
-    role: 'Shapes mood, concept, styling direction, and overall brand polish.',
-    image:
-      'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=80',
+    name: 'Creative Producer',
+    role: 'Shapes styling, mood boards, scheduling, and visual continuity so each session feels considered.',
   },
   {
-    name: 'Editor / Retoucher',
-    role: 'Refines every image with balanced color, detail work, and premium finishing.',
-    image:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80',
+    name: 'Retouch & Delivery',
+    role: 'Handles clean retouching, gallery preparation, and polished final presentation for every client delivery.',
   },
 ];
 
 export const businessHours = [
   { day: 'Monday - Friday', time: '9:00 AM - 6:00 PM' },
   { day: 'Saturday', time: '10:00 AM - 4:00 PM' },
-  { day: 'Sunday', time: 'By appointment' },
+  { day: 'Sunday', time: 'Consultation by appointment' },
 ];
 
 export const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(

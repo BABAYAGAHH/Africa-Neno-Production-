@@ -5,6 +5,7 @@ import CTASection from '../components/CTASection';
 import PageHero from '../components/PageHero';
 import SectionHeader from '../components/SectionHeader';
 import SectionWrapper from '../components/SectionWrapper';
+import { brandImages } from '../data/media';
 import { address, businessHours, email, phone, setPageMeta, socialLinks, whatsappLink } from '../data/site';
 
 const iconMap = {
@@ -12,6 +13,20 @@ const iconMap = {
   Facebook,
   YouTube: Youtube,
 };
+
+const contactCards = [
+  { title: 'Phone', value: phone, icon: Phone },
+  { title: 'WhatsApp', value: '+234 803 000 0000', icon: MessageCircle },
+  { title: 'Email', value: email, icon: Mail },
+  { title: 'Base', value: address, icon: MapPin },
+];
+
+const serviceAreas = [
+  'Lagos studio and outdoor sessions',
+  'Wedding and event coverage across major Nigerian cities',
+  'Founder, team, and brand shoots for modern businesses',
+  'Destination and travel-ready bookings on request',
+];
 
 export default function Contact() {
   useEffect(() => {
@@ -23,61 +38,58 @@ export default function Contact() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Let's talk about your next session, event, or visual project."
-        description="Use the form, phone, WhatsApp, or email to reach Africa Neno Production quickly and confidently."
-        image="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80"
+        title="Talk to the studio about your next session, event, or brand production."
+        description="Use the contact form, email, phone, or WhatsApp to reach Africa Neno Production quickly and confidently."
+        image={brandImages.contactHero}
       />
 
-      <SectionWrapper>
+      <SectionWrapper tone="light">
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {[
-            { title: 'Phone', value: phone, icon: Phone },
-            { title: 'WhatsApp', value: '+234 800 000 0000', icon: MessageCircle },
-            { title: 'Email', value: email, icon: Mail },
-            { title: 'Address', value: address, icon: MapPin },
-          ].map((card) => {
-            const Icon = card.icon;
+          {contactCards.map((item) => {
+            const Icon = item.icon;
             return (
-              <div key={card.title} className="glass-panel p-6">
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold">
-                  <Icon size={20} />
+              <div key={item.title} className="premium-card-light p-6">
+                <span className="inline-flex h-14 w-14 items-center justify-center rounded-[20px] bg-brand-soft text-brand-deep">
+                  <Icon size={22} />
                 </span>
-                <p className="mt-5 text-[10px] uppercase tracking-[0.34em] text-white/42">{card.title}</p>
-                <p className="mt-3 text-lg text-white">{card.value}</p>
+                <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.24em] text-charcoal/42">{item.title}</p>
+                <p className="mt-3 text-sm leading-7 text-charcoal/72">{item.value}</p>
               </div>
             );
           })}
         </div>
       </SectionWrapper>
 
-      <SectionWrapper>
-        <div className="grid items-start gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+      <SectionWrapper tone="light">
+        <div className="grid items-start gap-8 lg:grid-cols-[1.02fr_0.98fr]">
           <ContactForm />
           <div className="space-y-6">
-            <div className="glass-panel p-8">
+            <div className="light-panel p-8 sm:p-10">
               <SectionHeader
                 eyebrow="Business Hours"
-                title="Business hours, direct contact options, and quick ways to reach the studio."
-                description="If you are ready to plan a shoot, we are happy to guide you on dates, packages, and next steps."
+                title="Reach out during business hours or send a message and we will respond as quickly as possible."
+                description="If you are planning a premium shoot or event, we are happy to help with dates, package direction, and the best next step."
+                tone="light"
               />
-              <div className="mt-8 space-y-4 text-sm text-white/68">
+              <div className="mt-8 space-y-4 text-sm text-charcoal/72">
                 {businessHours.map((item) => (
-                  <div key={item.day} className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
-                    <span className="flex items-center gap-2 uppercase tracking-[0.22em] text-white/46">
-                      <Clock3 size={14} className="text-gold" />
+                  <div key={item.day} className="flex items-center justify-between gap-4 border-b border-brand-deep/8 pb-4 last:border-b-0 last:pb-0">
+                    <span className="flex items-center gap-2 uppercase tracking-[0.2em] text-charcoal/46">
+                      <Clock3 size={14} className="text-brand" />
                       {item.day}
                     </span>
                     <span>{item.time}</span>
                   </div>
                 ))}
               </div>
-              <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-secondary mt-6 gap-2">
+              <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-secondary mt-8 gap-2">
                 <MessageCircle size={16} />
                 Chat on WhatsApp
               </a>
             </div>
-            <div className="glass-panel p-8">
-              <p className="text-[10px] uppercase tracking-[0.34em] text-gold">Social Links</p>
+
+            <div className="premium-card-light p-8 sm:p-10">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-deep/46">Social Links</p>
               <div className="mt-5 flex flex-wrap gap-3">
                 {socialLinks.map((social) => {
                   const Icon = iconMap[social.label] || Instagram;
@@ -87,7 +99,7 @@ export default function Contact() {
                       href={social.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-3 text-sm text-white/78 transition hover:border-gold/40 hover:text-gold"
+                      className="inline-flex items-center gap-2 rounded-full border border-brand-deep/10 bg-white px-4 py-3 text-sm text-charcoal/78 transition hover:border-brand/30 hover:text-brand-deep"
                     >
                       <Icon size={16} />
                       {social.label}
@@ -100,25 +112,34 @@ export default function Contact() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper tone="light">
-        <div className="light-panel p-8 sm:p-10 lg:p-14">
-          <p className="text-[10px] uppercase tracking-[0.34em] text-gold">Location</p>
-          <h2 className="mt-5 font-display text-4xl sm:text-5xl">
-            Serving Lagos and available for studio, outdoor, event, and destination bookings.
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-charcoal/72">
-            This section can later hold an embedded map, a pickup point, or your full public studio address once it is finalized.
-          </p>
+      <SectionWrapper>
+        <div className="grid gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+          <div className="glass-panel p-8 sm:p-10">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-soft">Where We Work</p>
+            <h2 className="mt-4 font-display text-4xl leading-tight text-white sm:text-5xl">
+              Serving Lagos and available for bookings across Nigeria.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-white/72">
+              We work across studio sessions, outdoor productions, weddings, events, and commercial assignments, with travel available where the story and schedule call for it.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            {serviceAreas.map((item) => (
+              <div key={item} className="rounded-[26px] border border-white/12 bg-white/8 p-6 backdrop-blur-sm">
+                <p className="text-sm leading-8 text-white/74">{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </SectionWrapper>
 
       <CTASection
         eyebrow="Need A Fast Reply"
         title="Use WhatsApp or the contact form to start the conversation today."
-        description="Whether you are booking a session or asking a question, we are ready to help you plan the right next step."
-        primaryAction={{ label: 'Book a Session', to: '/booking' }}
+        description="Whether you are booking a session, asking about a date, or planning a custom production, we are ready to help you move to the right next step."
+        primaryAction={{ label: 'Book A Session', to: '/booking' }}
         secondaryAction={{ label: 'View Portfolio', to: '/portfolio' }}
-        image="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?auto=format&fit=crop&w=1600&q=80"
+        image={brandImages.ctaBrand}
       />
     </>
   );

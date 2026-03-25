@@ -1,83 +1,76 @@
-﻿export const services = [
+import { brandImages } from './media';
+
+export const services = [
   {
     id: 'wedding-photography',
     title: 'Wedding Photography',
     description:
-      'Elegant wedding coverage focused on emotion, detail, and timeless storytelling from start to finish.',
+      'Elegant wedding coverage for Nigerian ceremonies, civil unions, receptions, and intimate celebrations with emotional storytelling and strong detail capture.',
     icon: 'Heart',
-    image:
-      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80',
+    image: brandImages.celebration,
   },
   {
     id: 'pre-wedding-photography',
-    title: 'Pre-Wedding Photography',
+    title: 'Pre-Wedding Sessions',
     description:
-      'Cinematic pre-wedding sessions with editorial direction and a romantic, polished feel.',
+      'Editorial pre-wedding imagery with relaxed direction, refined styling, and a polished look for save-the-date use and wedding storytelling.',
     icon: 'Sparkles',
-    image:
-      'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80',
+    image: brandImages.outdoorCouple,
   },
   {
     id: 'portrait-photography',
     title: 'Portrait Photography',
     description:
-      'Modern portrait sessions for personal branding, milestones, fashion-inspired looks, and studio headshots.',
+      'Premium portraits for personal milestones, rebranding, birthdays, fashion-forward looks, and studio-led headshots.',
     icon: 'Camera',
-    image:
-      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80',
+    image: brandImages.heroPrimary,
   },
   {
     id: 'birthday-shoots',
     title: 'Birthday Shoots',
     description:
-      'Styled birthday portraits that feel glamorous, celebratory, and uniquely personal.',
+      'Statement birthday sessions with elegant styling, confident posing, and celebratory imagery that feels premium rather than overly staged.',
     icon: 'Gift',
-    image:
-      'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80',
+    image: brandImages.traditionalBride,
   },
   {
     id: 'family-photography',
     title: 'Family Photography',
     description:
-      'Warm family sessions that preserve connection, personality, and meaningful moments beautifully.',
+      'Warm family sessions that preserve affection, connection, and timeless keepsake moments for growing households.',
     icon: 'Users',
-    image:
-      'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80',
+    image: brandImages.familyMoment,
   },
   {
     id: 'event-coverage',
     title: 'Event Coverage',
     description:
-      'Reliable event photography for birthdays, private celebrations, corporate events, and special gatherings.',
+      'Professional coverage for birthdays, corporate functions, private celebrations, launches, and social events that need polished documentation.',
     icon: 'CalendarDays',
-    image:
-      'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80',
+    image: brandImages.celebration,
   },
   {
     id: 'product-photography',
     title: 'Product Photography',
     description:
-      'Premium product visuals for campaigns, online stores, launches, and brand storytelling.',
+      'Commercial product imagery for Nigerian brands, beauty launches, online shops, and campaign-ready digital presentation.',
     icon: 'Package',
-    image:
-      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80',
+    image: brandImages.productDetail,
   },
   {
     id: 'studio-photography',
     title: 'Studio Photography',
     description:
-      'Controlled studio lighting and refined composition for sleek, premium imagery.',
+      'Controlled lighting, premium backdrops, and refined composition for clients who want a clean business-class finish.',
     icon: 'Aperture',
-    image:
-      'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=1200&q=80',
+    image: brandImages.heroPrimary,
   },
   {
     id: 'outdoor-photography',
     title: 'Outdoor Photography',
     description:
-      'Scenic outdoor sessions with natural light, movement, and a cinematic atmosphere.',
+      'Location sessions across Lagos and beyond with natural movement, environmental character, and cinematic balance.',
     icon: 'MapPin',
-    image:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80',
+    image: brandImages.outdoorCouple,
   },
 ];

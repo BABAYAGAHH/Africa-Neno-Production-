@@ -6,28 +6,29 @@ export default function BrandLogo({
   imageClassName = '',
   showName = false,
   showSubtitle = false,
+  subtitle = 'Lagos, Nigeria • Portraits, Weddings & Events',
   nameClassName = '',
   subtitleClassName = '',
 }) {
   return (
-    <div className={`inline-flex items-center gap-3 sm:gap-4 ${className}`}>
+    <div className={`inline-flex min-w-0 items-center gap-3 sm:gap-4 ${className}`}>
       <img
         src={logo}
         alt={`${studioName} logo`}
-        className={`w-auto max-w-full shrink-0 object-contain ${imageClassName || 'h-14 sm:h-16'}`}
+        className={`w-auto max-w-full shrink-0 object-contain drop-shadow-[0_10px_20px_rgba(14,44,22,0.12)] ${imageClassName || 'h-12 sm:h-14'}`}
       />
       {showName ? (
-        <div className="min-w-0 max-w-[13rem] sm:max-w-none">
+        <div className="min-w-0 max-w-[15rem] sm:max-w-none">
           <p
-            className={`font-display text-lg leading-[0.95] tracking-[0.14em] uppercase sm:text-2xl ${nameClassName}`}
+            className={`truncate font-display text-lg uppercase leading-[0.95] tracking-[0.12em] sm:text-2xl ${nameClassName}`}
           >
             {studioName}
           </p>
           {showSubtitle ? (
             <p
-              className={`mt-1 text-[10px] font-medium uppercase tracking-[0.28em] sm:text-[11px] ${subtitleClassName}`}
+              className={`mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] sm:text-[11px] ${subtitleClassName}`}
             >
-              Professional Photography Studio
+              {subtitle}
             </p>
           ) : null}
         </div>

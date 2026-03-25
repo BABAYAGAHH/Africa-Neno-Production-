@@ -1,22 +1,26 @@
-﻿export const faq = [
+export const faq = [
   {
     id: 'book-session',
-    question: 'How do I book a session?',
-    answer: 'You can use the booking form or contact us through WhatsApp.',
+    question: 'How do I book a session with Africa Neno Production?',
+    answer:
+      'You can submit the booking form, send a WhatsApp message, or contact the studio directly. We will confirm availability, ask a few planning questions, and guide you to the right package or custom quote.',
   },
   {
     id: 'travel',
-    question: 'Do you travel for shoots?',
-    answer: 'Yes, travel options are available depending on location and package.',
+    question: 'Do you travel outside Lagos for shoots and events?',
+    answer:
+      'Yes. We are based in Lagos and available for destination sessions, interstate weddings, and corporate assignments across Nigeria. Travel costs and logistics are added based on location and coverage needs.',
   },
   {
     id: 'delivery',
-    question: 'How long does delivery take?',
-    answer: 'Delivery depends on the selected package and project type.',
+    question: 'How long does delivery usually take?',
+    answer:
+      'Preview turnaround is typically within 72 hours for selected projects, while final delivery depends on the session type, image volume, and chosen package. We communicate timelines clearly before production begins.',
   },
   {
     id: 'custom-package',
-    question: 'Can I request a custom package?',
-    answer: 'Yes, custom packages are available for unique sessions and events.',
+    question: 'Can I request a package that is tailored to my event or brand?',
+    answer:
+      'Absolutely. Custom packages are available for weddings, campaigns, launches, editorial briefs, and larger events that need more flexible timing, deliverables, or support.',
   },
 ];

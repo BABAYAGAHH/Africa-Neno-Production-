@@ -1,4 +1,4 @@
-﻿import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Route, Routes, useLocation } from 'react-router';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -16,16 +16,17 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="relative overflow-x-hidden">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(200,169,107,0.12),transparent_38%)]" />
+    <div className="relative min-h-screen overflow-x-hidden bg-ivory text-charcoal">
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(144,190,66,0.18),transparent_30%),radial-gradient(circle_at_top_right,rgba(13,57,25,0.08),transparent_28%),linear-gradient(180deg,#faf8f2_0%,#f7f3ea_50%,#f2ede1_100%)]" />
+      <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 h-[420px] bg-[linear-gradient(135deg,rgba(53,106,42,0.08),transparent_60%)]" />
       <Navbar />
       <AnimatePresence mode="wait">
         <motion.main
           key={location.pathname}
-          initial={{ opacity: 0, y: 14 }}
+          initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -14 }}
-          transition={{ duration: 0.35, ease: 'easeOut' }}
+          exit={{ opacity: 0, y: -18 }}
+          transition={{ duration: 0.38, ease: 'easeOut' }}
         >
           <Routes location={location}>
             <Route path="/" element={<Home />} />
