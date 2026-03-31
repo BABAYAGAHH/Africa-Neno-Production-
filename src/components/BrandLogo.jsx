@@ -1,6 +1,9 @@
 import logo from '../assets/africa-neno-logo.svg';
 import { brandSignature, studioName } from '../data/site';
 
+const primaryWordmark = 'Africa Neno';
+const secondaryWordmark = 'Production';
+
 export default function BrandLogo({
   className = '',
   imageClassName = '',
@@ -18,15 +21,18 @@ export default function BrandLogo({
         className={`w-auto max-w-full shrink-0 object-contain drop-shadow-[0_10px_20px_rgba(14,44,22,0.12)] ${imageClassName || 'h-12 sm:h-14'}`}
       />
       {showName ? (
-        <div className="min-w-0 max-w-[15.5rem] sm:max-w-none">
-          <p
-            className={`truncate font-display text-lg uppercase leading-none tracking-[0.14em] sm:text-2xl ${nameClassName}`}
-          >
-            {studioName}
-          </p>
+        <div className="min-w-0 max-w-[15.75rem] sm:max-w-none">
+          <div className={`text-lg sm:text-2xl ${nameClassName}`}>
+            <span className="block whitespace-nowrap font-display leading-[0.9] tracking-[0.12em] sm:tracking-[0.16em]">
+              {primaryWordmark}
+            </span>
+            <span className="mt-1 block whitespace-nowrap font-display text-[0.66em] uppercase leading-none tracking-[0.34em] opacity-80">
+              {secondaryWordmark}
+            </span>
+          </div>
           {showSubtitle ? (
             <p
-              className={`mt-1.5 text-[10px] font-semibold uppercase tracking-[0.24em] sm:text-[11px] ${subtitleClassName}`}
+              className={`mt-2 text-[10px] font-semibold uppercase tracking-[0.24em] sm:text-[11px] ${subtitleClassName}`}
             >
               {subtitle}
             </p>

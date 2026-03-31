@@ -1,46 +1,46 @@
 export const brandImages = {
   heroPrimary:
-    'https://images.pexels.com/photos/28426940/pexels-photo-28426940.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/33962063/pexels-photo-33962063.jpeg?auto=compress&cs=tinysrgb&w=1600',
   heroSecondary:
-    'https://images.pexels.com/photos/33330924/pexels-photo-33330924.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/33330922/pexels-photo-33330922.jpeg?auto=compress&cs=tinysrgb&w=1600',
   heroTertiary:
-    'https://images.pexels.com/photos/20209020/pexels-photo-20209020.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/36489506/pexels-photo-36489506.jpeg?auto=compress&cs=tinysrgb&w=1600',
   aboutHero:
-    'https://images.pexels.com/photos/20209020/pexels-photo-20209020.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/35009925/pexels-photo-35009925.jpeg?auto=compress&cs=tinysrgb&w=1600',
   aboutStory:
-    'https://images.pexels.com/photos/33330924/pexels-photo-33330924.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/34789538/pexels-photo-34789538.jpeg?auto=compress&cs=tinysrgb&w=1600',
   servicesHero:
-    'https://images.pexels.com/photos/32366908/pexels-photo-32366908.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/34752673/pexels-photo-34752673.jpeg?auto=compress&cs=tinysrgb&w=1600',
   packagesHero:
-    'https://images.pexels.com/photos/34310533/pexels-photo-34310533.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/35108253/pexels-photo-35108253.jpeg?auto=compress&cs=tinysrgb&w=1600',
   portfolioHero:
-    'https://images.pexels.com/photos/31877242/pexels-photo-31877242.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/33693440/pexels-photo-33693440.jpeg?auto=compress&cs=tinysrgb&w=1600',
   testimonialsHero:
-    'https://images.pexels.com/photos/35245318/pexels-photo-35245318.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/33900360/pexels-photo-33900360.jpeg?auto=compress&cs=tinysrgb&w=1600',
   bookingHero:
-    'https://images.pexels.com/photos/28426940/pexels-photo-28426940.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/33962065/pexels-photo-33962065.jpeg?auto=compress&cs=tinysrgb&w=1600',
   contactHero:
-    'https://images.pexels.com/photos/20209020/pexels-photo-20209020.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/36489506/pexels-photo-36489506.jpeg?auto=compress&cs=tinysrgb&w=1600',
   ctaWedding:
-    'https://images.pexels.com/photos/32366908/pexels-photo-32366908.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/34618242/pexels-photo-34618242.jpeg?auto=compress&cs=tinysrgb&w=1600',
   ctaStudio:
-    'https://images.pexels.com/photos/28426940/pexels-photo-28426940.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/33931240/pexels-photo-33931240.jpeg?auto=compress&cs=tinysrgb&w=1600',
   ctaBrand:
-    'https://images.pexels.com/photos/20209020/pexels-photo-20209020.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/34789538/pexels-photo-34789538.jpeg?auto=compress&cs=tinysrgb&w=1600',
   familyMoment:
-    'https://images.pexels.com/photos/35245318/pexels-photo-35245318.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/33900360/pexels-photo-33900360.jpeg?auto=compress&cs=tinysrgb&w=1600',
   traditionalBride:
-    'https://images.pexels.com/photos/34310533/pexels-photo-34310533.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/34618239/pexels-photo-34618239.jpeg?auto=compress&cs=tinysrgb&w=1600',
   traditionalCouple:
-    'https://images.pexels.com/photos/33330924/pexels-photo-33330924.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/35896674/pexels-photo-35896674.jpeg?auto=compress&cs=tinysrgb&w=1600',
   celebration:
-    'https://images.pexels.com/photos/32366908/pexels-photo-32366908.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/34752673/pexels-photo-34752673.jpeg?auto=compress&cs=tinysrgb&w=1600',
   outdoorCouple:
-    'https://images.pexels.com/photos/31877242/pexels-photo-31877242.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/33693440/pexels-photo-33693440.jpeg?auto=compress&cs=tinysrgb&w=1600',
   productFlatlay:
-    'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1600&q=80',
+    'https://images.pexels.com/photos/36537429/pexels-photo-36537429.jpeg?auto=compress&cs=tinysrgb&w=1600',
   productDetail:
-    'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1600&q=80',
+    'https://images.pexels.com/photos/34476746/pexels-photo-34476746.jpeg?auto=compress&cs=tinysrgb&w=1600',
   beautyDetail:
-    'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1600&q=80',
+    'https://images.pexels.com/photos/33781295/pexels-photo-33781295.jpeg?auto=compress&cs=tinysrgb&w=1600',
 };
