@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { Link, NavLink, useLocation } from 'react-router';
@@ -7,43 +7,75 @@ import { brandSignature, navLinks } from '../data/site';
 
 const desktopNavLinks = navLinks.filter((link) => link.to !== '/booking');
 const mobileQuickLinks = navLinks.filter((link) =>
-  ['/services', '/packages', '/contact', '/booking'].includes(link.to),
+  ['/services', '/portfolio', '/booking', '/contact'].includes(link.to),
 );
 
 export default function Navbar() {
   const location = useLocation();
+  const lastScrollY = useRef(0);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [showQuickNav, setShowQuickNav] = useState(true);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 18);
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      const delta = currentY - lastScrollY.current;
+      const isMovingDown = delta > 6;
+      const isMovingUp = delta < -6;
+
+      setIsScrolled(currentY > 18);
+
+      if (currentY <= 24) {
+        setIsHeaderVisible(true);
+        setShowQuickNav(true);
+      } else if (isMovingDown && currentY > 120) {
+        setIsHeaderVisible(false);
+        setShowQuickNav(false);
+        setIsOpen(false);
+      } else if (isMovingUp) {
+        setIsHeaderVisible(true);
+        setShowQuickNav(true);
+      }
+
+      lastScrollY.current = currentY;
+    };
+
     onScroll();
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
     setIsOpen(false);
+    setIsHeaderVisible(true);
+    setShowQuickNav(true);
+    lastScrollY.current = 0;
   }, [location.pathname]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-transform duration-300 ease-out ${
+        isHeaderVisible || isOpen ? 'translate-y-0' : '-translate-y-[calc(100%+1.5rem)]'
+      }`}
+    >
       <div className={`section-shell transition-all duration-300 ${isScrolled ? 'pt-3' : 'pt-4 sm:pt-5'}`}>
         <div
-          className={`overflow-hidden rounded-[32px] border transition-all duration-300 ${
+          className={`overflow-hidden rounded-[30px] border transition-all duration-300 ${
             isScrolled
               ? 'border-white/10 bg-[linear-gradient(180deg,rgba(8,25,12,0.94)_0%,rgba(10,31,16,0.94)_100%)] shadow-[0_24px_62px_rgba(4,20,10,0.28)] backdrop-blur-2xl'
               : 'border-white/10 bg-[linear-gradient(180deg,rgba(11,33,17,0.88)_0%,rgba(11,33,17,0.82)_100%)] shadow-[0_18px_46px_rgba(4,20,10,0.2)] backdrop-blur-xl'
           }`}
         >
-          <div className="flex items-center gap-4 px-4 py-3.5 sm:px-5 sm:py-4 lg:px-6 xl:px-7">
+          <div className="flex items-center gap-3 px-4 py-3 sm:px-5 sm:py-4 lg:px-6 xl:px-7">
             <Link to="/" className="min-w-0 flex-1 lg:flex-none">
               <BrandLogo
                 showName
                 showSubtitle
                 subtitle={brandSignature}
-                imageClassName="h-14 sm:h-16 xl:h-[3.7rem]"
-                nameClassName="text-white text-[0.95rem] sm:text-[1.2rem] xl:text-[1.28rem]"
+                imageClassName="h-12 sm:h-16 xl:h-[3.7rem]"
+                nameClassName="text-white text-[0.92rem] sm:text-[1.2rem] xl:text-[1.28rem]"
                 subtitleClassName="hidden text-white/50 2xl:block"
               />
             </Link>
@@ -61,36 +93,46 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setIsOpen((current) => !current)}
-              className="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-brand-soft shadow-[0_12px_30px_rgba(4,20,10,0.16)] hover:bg-white/[0.1] lg:hidden"
+              className="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-brand-soft shadow-[0_12px_30px_rgba(4,20,10,0.16)] hover:bg-white/[0.1] lg:hidden"
               aria-label="Toggle navigation"
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
             >
-              {isOpen ? <X size={20} /> : <Menu size={20} />}
+              {isOpen ? <X size={19} /> : <Menu size={19} />}
             </button>
           </div>
 
-          <div className="border-t border-white/8 lg:hidden">
-            <div className="overflow-x-auto px-4 pb-3 pt-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              <nav aria-label="Quick mobile navigation" className="flex w-max min-w-full items-center gap-2">
-                {mobileQuickLinks.map((link) => (
-                  <NavLink
-                    key={link.to}
-                    to={link.to}
-                    className={({ isActive }) =>
-                      `whitespace-nowrap rounded-full border px-3.5 py-2.5 text-[0.62rem] font-semibold uppercase tracking-[0.2em] transition-colors ${
-                        isActive
-                          ? 'border-brand-soft/40 bg-brand-soft text-brand-darker'
-                          : 'border-white/10 bg-white/[0.04] text-white/74 hover:border-white/18 hover:text-white'
-                      }`
-                    }
-                  >
-                    {link.label}
-                  </NavLink>
-                ))}
-              </nav>
-            </div>
-          </div>
+          <AnimatePresence initial={false}>
+            {showQuickNav && !isOpen ? (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.22, ease: 'easeOut' }}
+                className="border-t border-white/8 lg:hidden"
+              >
+                <div className="overflow-x-auto px-4 pb-3 pt-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                  <nav aria-label="Quick mobile navigation" className="flex w-max min-w-full items-center gap-2">
+                    {mobileQuickLinks.map((link) => (
+                      <NavLink
+                        key={link.to}
+                        to={link.to}
+                        className={({ isActive }) =>
+                          `whitespace-nowrap rounded-full border px-3 py-2 text-[0.58rem] font-semibold uppercase tracking-[0.18em] transition-colors ${
+                            isActive
+                              ? 'border-brand-soft/40 bg-brand-soft text-brand-darker'
+                              : 'border-white/10 bg-white/[0.04] text-white/74 hover:border-white/18 hover:text-white'
+                          }`
+                        }
+                      >
+                        {link.label}
+                      </NavLink>
+                    ))}
+                  </nav>
+                </div>
+              </motion.div>
+            ) : null}
+          </AnimatePresence>
 
           <div className="hidden border-t border-white/8 lg:block">
             <div className="overflow-x-auto px-6 py-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden xl:px-7">

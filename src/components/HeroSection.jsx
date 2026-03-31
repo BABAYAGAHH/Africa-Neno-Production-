@@ -7,7 +7,7 @@ import { brandHighlights, brandSignature, heroContent, locationLabel, stats } fr
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-28 sm:pt-32">
+    <section className="relative overflow-hidden pt-40 sm:pt-32">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[78%] bg-[radial-gradient(circle_at_top_left,rgba(144,190,66,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(13,57,25,0.08),transparent_26%)]" />
       <div className="pointer-events-none absolute inset-0 opacity-35 [background-image:radial-gradient(rgba(16,35,22,0.04)_0.65px,transparent_0.65px)] [background-size:20px_20px]" />
       <div className="section-shell relative pb-24 pt-10 sm:pt-12">
