@@ -17,16 +17,17 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-ivory text-charcoal">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(144,190,66,0.18),transparent_30%),radial-gradient(circle_at_top_right,rgba(13,57,25,0.08),transparent_28%),linear-gradient(180deg,#faf8f2_0%,#f7f3ea_50%,#f2ede1_100%)]" />
-      <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 h-[420px] bg-[linear-gradient(135deg,rgba(53,106,42,0.08),transparent_60%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(144,190,66,0.12),transparent_28%),radial-gradient(circle_at_top_right,rgba(32,77,29,0.08),transparent_22%),linear-gradient(180deg,#fbfaf6_0%,#f6f1e8_50%,#efe8dc_100%)]" />
+      <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 h-[32rem] bg-[linear-gradient(180deg,rgba(11,33,17,0.05)_0%,rgba(11,33,17,0)_100%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-10 opacity-40 [background-image:radial-gradient(rgba(16,35,22,0.05)_0.6px,transparent_0.6px)] [background-size:18px_18px] [mask-image:linear-gradient(180deg,black_18%,transparent_100%)]" />
       <Navbar />
       <AnimatePresence mode="wait">
         <motion.main
           key={location.pathname}
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -18 }}
-          transition={{ duration: 0.38, ease: 'easeOut' }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.28, ease: 'easeOut' }}
         >
           <Routes location={location}>
             <Route path="/" element={<Home />} />

@@ -9,13 +9,14 @@
   --color-brand-mist: #f8fbf5;
   --color-charcoal: #102316;
   --color-ivory: #f7f3ea;
-  --color-gold: #90be42;
+  --color-paper: #fbfaf6;
   --color-muted: #556558;
   --color-surface: #f1ede4;
   --font-display: "Cormorant Garamond", serif;
   --font-sans: "Manrope", sans-serif;
-  --shadow-soft: 0 24px 60px rgba(14, 44, 22, 0.08);
-  --shadow-gold: 0 22px 55px rgba(93, 143, 71, 0.22);
+  --shadow-soft: 0 22px 54px rgba(14, 44, 22, 0.08);
+  --shadow-lifted: 0 28px 72px rgba(14, 44, 22, 0.12);
+  --shadow-dark: 0 28px 72px rgba(4, 20, 10, 0.28);
 }
 
 @layer base {
@@ -30,9 +31,9 @@
   body {
     min-height: 100vh;
     background:
-      radial-gradient(circle at top left, rgba(144, 190, 66, 0.18), transparent 30%),
-      radial-gradient(circle at top right, rgba(13, 57, 25, 0.08), transparent 28%),
-      linear-gradient(180deg, #faf8f2 0%, #f7f3ea 48%, #f2ede1 100%);
+      radial-gradient(circle at top left, rgba(144, 190, 66, 0.15), transparent 28%),
+      radial-gradient(circle at top right, rgba(32, 77, 29, 0.07), transparent 24%),
+      linear-gradient(180deg, #fbfaf6 0%, #f7f3ea 48%, #efe8dc 100%);
     color: var(--color-charcoal);
     font-family: var(--font-sans);
     text-rendering: optimizeLegibility;
@@ -45,12 +46,10 @@
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background-image:
-      linear-gradient(rgba(16, 35, 22, 0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(16, 35, 22, 0.025) 1px, transparent 1px);
-    background-size: 72px 72px;
-    mask-image: radial-gradient(circle at center, black 42%, transparent 92%);
-    opacity: 0.4;
+    background-image: radial-gradient(rgba(16, 35, 22, 0.045) 0.7px, transparent 0.7px);
+    background-size: 18px 18px;
+    mask-image: linear-gradient(180deg, black 18%, transparent 100%);
+    opacity: 0.36;
     z-index: -1;
   }
 
@@ -84,7 +83,7 @@
   }
 
   ::selection {
-    background: rgba(93, 143, 71, 0.2);
+    background: rgba(93, 143, 71, 0.18);
     color: var(--color-charcoal);
   }
 
@@ -97,59 +96,59 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(32, 77, 29, 0.36);
+    background: rgba(32, 77, 29, 0.34);
     border-radius: 999px;
   }
 }
 
 @layer components {
   .section-shell {
-    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto w-full max-w-[82rem] px-5 sm:px-7 lg:px-10;
   }
 
   .page-pad {
-    padding-block: clamp(4.25rem, 7vw, 6.5rem);
+    padding-block: clamp(5rem, 8vw, 8rem);
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-3 rounded-full border border-brand-deep/12 bg-white/82 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-brand-deep/68 shadow-[0_18px_34px_rgba(14,44,22,0.06)] backdrop-blur-sm;
+    @apply inline-flex items-center gap-3 rounded-full border border-brand-deep/10 bg-white/76 px-4 py-2 text-[0.64rem] font-semibold uppercase tracking-[0.28em] text-brand-deep/62 shadow-[0_10px_28px_rgba(14,44,22,0.06)] backdrop-blur-sm;
   }
 
   .eyebrow::before {
     content: '';
-    @apply h-px w-8 bg-current opacity-35;
+    @apply h-px w-8 bg-current opacity-30;
   }
 
   .glass-panel {
-    @apply rounded-[30px] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.05)_100%),linear-gradient(180deg,rgba(13,57,25,0.96)_0%,rgba(9,34,17,0.96)_100%)] shadow-[0_30px_70px_rgba(4,20,10,0.28)] backdrop-blur-xl;
+    @apply rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.03)_100%),linear-gradient(180deg,rgba(12,39,19,0.96)_0%,rgba(9,29,15,0.98)_100%)] shadow-[0_26px_64px_rgba(4,20,10,0.26)] backdrop-blur-xl;
   }
 
   .light-panel {
-    @apply rounded-[30px] border border-brand-deep/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.94)_0%,rgba(251,250,245,0.98)_100%)] text-charcoal shadow-soft;
+    @apply rounded-[32px] border border-brand-deep/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(250,248,242,0.96)_100%)] text-charcoal shadow-soft;
   }
 
   .premium-card-light {
-    @apply rounded-[28px] border border-brand-deep/8 bg-white/92 shadow-[0_22px_50px_rgba(14,44,22,0.1)];
+    @apply rounded-[30px] border border-brand-deep/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.95)_0%,rgba(249,247,241,0.98)_100%)] shadow-soft;
   }
 
   .btn-primary,
   .btn-secondary,
   .btn-light,
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-3 rounded-full px-6 py-4 text-[0.78rem] font-extrabold uppercase tracking-[0.22em] whitespace-nowrap;
+    @apply inline-flex items-center justify-center gap-3 rounded-full px-5 py-3.5 text-[0.71rem] font-semibold uppercase tracking-[0.18em] whitespace-nowrap;
   }
 
   .btn-primary {
-    @apply border border-brand-deep/8 bg-[linear-gradient(180deg,#5d8f47_0%,#2a5f25_100%)] text-white shadow-[0_24px_48px_rgba(42,95,37,0.28)] hover:-translate-y-0.5 hover:shadow-[0_28px_54px_rgba(42,95,37,0.34)];
+    @apply border border-brand-deep/12 bg-[linear-gradient(180deg,#5d8f47_0%,#315c2b_100%)] text-white shadow-[0_18px_38px_rgba(42,95,37,0.24)] hover:-translate-y-px hover:shadow-[0_22px_44px_rgba(42,95,37,0.28)];
   }
 
   .btn-secondary,
   .btn-light {
-    @apply border border-brand-deep/12 bg-white/88 text-charcoal shadow-[0_20px_42px_rgba(14,44,22,0.08)] hover:-translate-y-0.5 hover:border-brand/25 hover:bg-white;
+    @apply border border-brand-deep/10 bg-white/88 text-charcoal shadow-[0_14px_34px_rgba(14,44,22,0.07)] hover:-translate-y-px hover:border-brand-deep/18 hover:bg-white;
   }
 
   .btn-ghost {
-    @apply border border-white/16 bg-white/6 text-white hover:-translate-y-0.5 hover:border-white/26 hover:bg-white/10;
+    @apply border border-white/14 bg-white/6 text-white hover:-translate-y-px hover:border-white/26 hover:bg-white/10;
   }
 
   .btn-primary:disabled,
@@ -169,6 +168,6 @@
 
   .field-input,
   .field-input-light {
-    @apply w-full rounded-[22px] border border-brand-deep/12 bg-white/92 px-4 py-4 text-[0.95rem] leading-7 text-charcoal placeholder:text-charcoal/40 focus:border-brand/45 focus:shadow-[0_0_0_4px_rgba(93,143,71,0.12)] focus:outline-none;
+    @apply w-full rounded-[24px] border border-brand-deep/12 bg-white/92 px-4 py-4 text-[0.95rem] leading-7 text-charcoal placeholder:text-charcoal/40 focus:border-brand/45 focus:shadow-[0_0_0_4px_rgba(93,143,71,0.12)] focus:outline-none;
   }
 }

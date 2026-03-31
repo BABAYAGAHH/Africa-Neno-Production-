@@ -25,40 +25,37 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className={`section-shell transition-all duration-300 ${isScrolled ? 'pt-3' : 'pt-4'}`}>
+      <div className={`section-shell transition-all duration-300 ${isScrolled ? 'pt-3' : 'pt-4 sm:pt-5'}`}>
         <div
-          className={`overflow-hidden rounded-[30px] border transition-all duration-300 ${
+          className={`overflow-hidden rounded-[32px] border transition-all duration-300 ${
             isScrolled
-              ? 'border-white/10 bg-[linear-gradient(180deg,rgba(8,24,12,0.94)_0%,rgba(11,33,17,0.92)_100%)] shadow-[0_26px_70px_rgba(4,20,10,0.32)] backdrop-blur-2xl'
-              : 'border-white/10 bg-[linear-gradient(180deg,rgba(11,33,17,0.86)_0%,rgba(11,33,17,0.8)_100%)] shadow-[0_22px_64px_rgba(4,20,10,0.24)] backdrop-blur-xl'
+              ? 'border-white/10 bg-[linear-gradient(180deg,rgba(8,25,12,0.94)_0%,rgba(10,31,16,0.94)_100%)] shadow-[0_24px_62px_rgba(4,20,10,0.28)] backdrop-blur-2xl'
+              : 'border-white/10 bg-[linear-gradient(180deg,rgba(11,33,17,0.88)_0%,rgba(11,33,17,0.82)_100%)] shadow-[0_18px_46px_rgba(4,20,10,0.2)] backdrop-blur-xl'
           }`}
         >
-          <div className="flex items-center gap-3 px-4 py-3 sm:px-5 lg:px-6 xl:gap-4 2xl:gap-5">
-            <Link to="/" className="min-w-0 flex-1 xl:flex-none">
+          <div className="flex items-center gap-4 px-4 py-3.5 sm:px-6 sm:py-4 xl:px-7">
+            <Link to="/" className="min-w-0 shrink-0">
               <BrandLogo
                 showName
                 showSubtitle
                 subtitle={brandSignature}
-                imageClassName="h-14 sm:h-16 xl:h-12 2xl:h-14"
-                nameClassName="text-white text-[0.95rem] sm:text-xl xl:text-[1.14rem] 2xl:text-[1.35rem]"
-                subtitleClassName="hidden text-white/56 2xl:block"
+                imageClassName="h-14 sm:h-16 xl:h-[3.7rem]"
+                nameClassName="text-white text-[0.95rem] sm:text-[1.2rem] xl:text-[1.3rem]"
+                subtitleClassName="hidden text-white/50 xl:block"
               />
             </Link>
 
-            <div className="hidden min-w-0 flex-1 items-center justify-end gap-3 xl:flex 2xl:gap-4">
-              <nav
-                aria-label="Primary navigation"
-                className="flex min-w-0 max-w-full flex-1 items-center justify-end gap-1 overflow-x-auto rounded-full border border-white/10 bg-white/6 p-1.5"
-              >
+            <div className="hidden min-w-0 flex-1 items-center justify-end gap-8 xl:flex">
+              <nav aria-label="Primary navigation" className="ml-auto flex min-w-0 items-center gap-5 2xl:gap-7">
                 {desktopNavLinks.map((link) => (
                   <NavLink
                     key={link.to}
                     to={link.to}
                     className={({ isActive }) =>
-                      `rounded-full px-3 py-2 text-[11px] font-bold uppercase tracking-[0.18em] transition ${
+                      `relative px-1 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:transition-transform ${
                         isActive
-                          ? 'bg-brand text-brand-darker shadow-[0_16px_30px_rgba(93,143,71,0.22)]'
-                          : 'text-white/74 hover:bg-white/10 hover:text-white'
+                          ? 'text-white after:scale-x-100 after:bg-brand-soft'
+                          : 'text-white/66 after:scale-x-0 after:bg-white/45 hover:text-white hover:after:scale-x-100'
                       }`
                     }
                   >
@@ -66,7 +63,8 @@ export default function Navbar() {
                   </NavLink>
                 ))}
               </nav>
-              <Link to="/booking" className="btn-primary shrink-0 px-4 py-3 text-[0.68rem] 2xl:px-5 2xl:text-[0.72rem]">
+
+              <Link to="/booking" className="btn-primary shrink-0 px-5 py-3.5 text-[0.68rem]">
                 Book Now
                 <ArrowRight size={16} />
               </Link>
@@ -75,7 +73,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setIsOpen((current) => !current)}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/6 text-brand-soft shadow-[0_18px_34px_rgba(4,20,10,0.18)] hover:bg-white/10 xl:hidden"
+              className="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-brand-soft shadow-[0_12px_30px_rgba(4,20,10,0.16)] hover:bg-white/[0.1] xl:hidden"
               aria-label="Toggle navigation"
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
@@ -95,20 +93,20 @@ export default function Navbar() {
                 className="border-t border-white/8 xl:hidden"
               >
                 <div className="px-4 pb-4 pt-3 sm:px-5">
-                  <div className="glass-panel p-5">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/58">
+                  <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-5 shadow-[0_18px_44px_rgba(4,20,10,0.2)] backdrop-blur-xl">
+                    <p className="text-[0.64rem] font-semibold uppercase tracking-[0.26em] text-white/52">
                       Navigate the studio
                     </p>
-                    <nav aria-label="Mobile navigation" className="mt-5 grid gap-3 sm:grid-cols-2">
+                    <nav aria-label="Mobile navigation" className="mt-5 grid gap-2.5">
                       {navLinks.map((link) => (
                         <NavLink
                           key={link.to}
                           to={link.to}
                           className={({ isActive }) =>
-                            `flex items-center justify-between rounded-[22px] border px-4 py-4 text-sm font-bold uppercase tracking-[0.16em] ${
+                            `flex items-center justify-between rounded-[22px] border px-4 py-4 text-[0.76rem] font-semibold uppercase tracking-[0.18em] ${
                               isActive
-                                ? 'border-brand bg-brand text-brand-darker'
-                                : 'border-white/12 bg-white/8 text-white/82'
+                                ? 'border-brand-soft/35 bg-brand-soft text-brand-darker'
+                                : 'border-white/10 bg-white/[0.04] text-white/78'
                             }`
                           }
                         >

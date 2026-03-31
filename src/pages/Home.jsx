@@ -45,8 +45,8 @@ export default function Home() {
       <HeroSection />
 
       <SectionWrapper tone="light">
-        <div className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
-          <div className="overflow-hidden rounded-[32px] border border-brand-deep/8 bg-white p-3 shadow-soft">
+        <div className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
+          <div className="light-panel overflow-hidden p-3">
             <img
               src={brandImages.heroTertiary}
               alt="African business woman in premium workspace"
@@ -62,15 +62,17 @@ export default function Home() {
             />
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {proofPoints.map((point) => (
-                <div key={point} className="premium-card-light flex items-start gap-3 p-5">
-                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-soft text-brand-deep">
+                <div key={point} className="premium-card-light flex items-start gap-3 p-5 sm:p-6">
+                  <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand-deep">
                     <BadgeCheck size={14} />
                   </span>
-                  <p className="text-sm leading-7 text-charcoal/68">{point}</p>
+                  <p className="text-sm leading-8 text-charcoal/66">{point}</p>
                 </div>
               ))}
             </div>
-            <Link to="/about" className="btn-secondary mt-8">Learn More</Link>
+            <Link to="/about" className="btn-secondary mt-8">
+              Learn More
+            </Link>
           </div>
         </div>
       </SectionWrapper>
@@ -83,7 +85,9 @@ export default function Home() {
             description={servicesShortCopy}
             tone="light"
           />
-          <Link to="/services" className="btn-light self-start">View All Services</Link>
+          <Link to="/services" className="btn-light self-start">
+            View All Services
+          </Link>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.slice(0, 6).map((service, index) => (
@@ -95,11 +99,13 @@ export default function Home() {
       <SectionWrapper tone="dark">
         <div className="grid gap-6 xl:grid-cols-[0.86fr_1.14fr] xl:items-start">
           <div className="glass-panel p-8 sm:p-10">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-soft">Why Clients Choose Us</p>
-            <h2 className="mt-4 font-display text-4xl leading-tight text-white sm:text-5xl">
+            <p className="text-[0.64rem] font-semibold uppercase tracking-[0.28em] text-brand-soft/86">
+              Why Clients Choose Us
+            </p>
+            <h2 className="mt-5 max-w-[12ch] font-display text-[clamp(2.8rem,5vw,4.5rem)] leading-[0.96] text-white">
               A process built around clarity, comfort, and business-class execution.
             </h2>
-            <p className="mt-5 text-base leading-8 text-white/72">
+            <p className="mt-6 text-[1rem] leading-8 text-white/72 sm:text-[1.05rem] sm:leading-9">
               Africa Neno Production blends creative taste with a smooth operational process, so clients feel guided, prepared, and proud of the result.
             </p>
           </div>
@@ -107,13 +113,13 @@ export default function Home() {
             {whyChooseUs.slice(0, 4).map((item) => {
               const Icon = iconMap[item.icon] || Sparkles;
               return (
-                <div key={item.title} className="rounded-[26px] border border-white/12 bg-white/8 p-6 backdrop-blur-sm">
+                <article key={item.title} className="rounded-[28px] border border-white/12 bg-white/[0.08] p-6 shadow-[0_18px_42px_rgba(4,20,10,0.16)] backdrop-blur-sm">
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-[18px] bg-white/10 text-brand-soft">
                     <Icon size={22} />
                   </span>
-                  <h3 className="mt-5 font-display text-3xl text-white">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-white/72">{item.description}</p>
-                </div>
+                  <h3 className="mt-5 font-display text-[2rem] leading-none text-white">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-8 text-white/72">{item.description}</p>
+                </article>
               );
             })}
           </div>
@@ -143,7 +149,9 @@ export default function Home() {
             description="Browse selected Nigerian wedding, portrait, family, product, and founder-focused imagery in a cleaner gallery experience."
             tone="dark"
           />
-          <Link to="/portfolio" className="btn-ghost self-start">View Full Portfolio</Link>
+          <Link to="/portfolio" className="btn-ghost self-start">
+            View Full Portfolio
+          </Link>
         </div>
         <div className="mt-12">
           <GalleryGrid items={portfolio} limit={6} tone="dark" />
@@ -158,7 +166,9 @@ export default function Home() {
             description="Comfort, professionalism, and polished delivery show up repeatedly in the feedback we receive."
             tone="light"
           />
-          <Link to="/testimonials" className="btn-light self-start">See All Reviews</Link>
+          <Link to="/testimonials" className="btn-light self-start">
+            See All Reviews
+          </Link>
         </div>
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {testimonials.slice(0, 3).map((item, index) => (
