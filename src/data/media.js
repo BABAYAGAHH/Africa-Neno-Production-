@@ -2,7 +2,7 @@ export const brandImages = {
   heroPrimary:
     'https://images.pexels.com/photos/33962063/pexels-photo-33962063.jpeg?auto=compress&cs=tinysrgb&w=1600',
   heroSecondary:
-    'https://images.pexels.com/photos/33330922/pexels-photo-33330922.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/29277896/pexels-photo-29277896.jpeg?auto=compress&cs=tinysrgb&w=1600',
   heroTertiary:
     'https://images.pexels.com/photos/36489506/pexels-photo-36489506.jpeg?auto=compress&cs=tinysrgb&w=1600',
   aboutHero:
@@ -12,7 +12,7 @@ export const brandImages = {
   servicesHero:
     'https://images.pexels.com/photos/34752673/pexels-photo-34752673.jpeg?auto=compress&cs=tinysrgb&w=1600',
   packagesHero:
-    'https://images.pexels.com/photos/35108253/pexels-photo-35108253.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/29865460/pexels-photo-29865460.jpeg?auto=compress&cs=tinysrgb&w=1600',
   portfolioHero:
     'https://images.pexels.com/photos/33693440/pexels-photo-33693440.jpeg?auto=compress&cs=tinysrgb&w=1600',
   testimonialsHero:
@@ -22,7 +22,7 @@ export const brandImages = {
   contactHero:
     'https://images.pexels.com/photos/36489506/pexels-photo-36489506.jpeg?auto=compress&cs=tinysrgb&w=1600',
   ctaWedding:
-    'https://images.pexels.com/photos/34618242/pexels-photo-34618242.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/34521459/pexels-photo-34521459.jpeg?auto=compress&cs=tinysrgb&w=1600',
   ctaStudio:
     'https://images.pexels.com/photos/33931240/pexels-photo-33931240.jpeg?auto=compress&cs=tinysrgb&w=1600',
   ctaBrand:
@@ -30,11 +30,11 @@ export const brandImages = {
   familyMoment:
     'https://images.pexels.com/photos/33900360/pexels-photo-33900360.jpeg?auto=compress&cs=tinysrgb&w=1600',
   traditionalBride:
-    'https://images.pexels.com/photos/34618239/pexels-photo-34618239.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/33090088/pexels-photo-33090088.jpeg?auto=compress&cs=tinysrgb&w=1600',
   traditionalCouple:
-    'https://images.pexels.com/photos/35896674/pexels-photo-35896674.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/29277896/pexels-photo-29277896.jpeg?auto=compress&cs=tinysrgb&w=1600',
   celebration:
-    'https://images.pexels.com/photos/34752673/pexels-photo-34752673.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/34521459/pexels-photo-34521459.jpeg?auto=compress&cs=tinysrgb&w=1600',
   outdoorCouple:
     'https://images.pexels.com/photos/33693440/pexels-photo-33693440.jpeg?auto=compress&cs=tinysrgb&w=1600',
   productFlatlay:
