@@ -39,6 +39,8 @@ export const brandImages = {
     'https://images.pexels.com/photos/34521459/pexels-photo-34521459.jpeg?auto=compress&cs=tinysrgb&w=1600',
   outdoorCouple:
     'https://images.pexels.com/photos/33693440/pexels-photo-33693440.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  outdoorCoupleStory:
+    'https://images.pexels.com/photos/33330924/pexels-photo-33330924.jpeg?auto=compress&cs=tinysrgb&w=1600',
   productFlatlay:
     'https://images.pexels.com/photos/36537429/pexels-photo-36537429.jpeg?auto=compress&cs=tinysrgb&w=1600',
   productDetail:

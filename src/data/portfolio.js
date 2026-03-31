@@ -40,7 +40,7 @@ export const portfolio = [
     id: 'outdoor-couple-story',
     title: 'Outdoor Couple Story',
     category: 'Outdoor',
-    image: brandImages.outdoorCouple,
+    image: brandImages.outdoorCoupleStory,
     description: 'Soft outdoor portraiture with movement, intimacy, and natural environmental atmosphere.',
   },
   {
