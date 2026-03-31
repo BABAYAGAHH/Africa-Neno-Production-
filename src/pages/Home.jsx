@@ -1,37 +1,58 @@
 import { useEffect } from 'react';
-import { Aperture, BadgeCheck, Clock3, Heart, Layers3, Sparkles } from 'lucide-react';
+import { BadgeCheck, Clock3, MapPin, Sparkles } from 'lucide-react';
 import { Link } from 'react-router';
 import CTASection from '../components/CTASection';
-import FAQAccordion from '../components/FAQAccordion';
-import GalleryGrid from '../components/GalleryGrid';
 import HeroSection from '../components/HeroSection';
-import PackageCard from '../components/PackageCard';
 import SectionHeader from '../components/SectionHeader';
 import SectionWrapper from '../components/SectionWrapper';
-import ServiceCard from '../components/ServiceCard';
-import TestimonialCard from '../components/TestimonialCard';
-import { faq } from '../data/faq';
 import { brandImages } from '../data/media';
-import { packages } from '../data/packages';
-import { portfolio } from '../data/portfolio';
-import { services } from '../data/services';
-import { aboutShortCopy, ctaContent, servicesShortCopy, setPageMeta, whyChooseUs } from '../data/site';
-import { testimonials } from '../data/testimonials';
+import {
+  aboutShortCopy,
+  ctaContent,
+  locationLabel,
+  mission,
+  setPageMeta,
+  vision,
+  whyChooseUs,
+} from '../data/site';
 
-const iconMap = {
-  Aperture,
-  BadgeCheck,
-  Clock3,
-  Heart,
-  Layers3,
-  Sparkles,
-};
+const studioProof = [
+  {
+    title: 'Studio-led direction',
+    description: 'Every session is guided with calm posing, visual structure, and a polished finish from the start.',
+    icon: Sparkles,
+  },
+  {
+    title: 'Clear delivery process',
+    description: 'Clients know what to expect, when to expect it, and how the final gallery will be presented.',
+    icon: Clock3,
+  },
+  {
+    title: 'Based in Agbor',
+    description: 'We serve Delta State clients directly while remaining available for destination and nationwide work.',
+    icon: MapPin,
+  },
+];
 
-const proofPoints = [
-  'Portrait sessions with art direction and premium retouching.',
-  'Wedding coverage that respects Nigerian culture, timing, and emotion.',
-  'Brand imagery for founders and businesses that need credibility online.',
-  'Clear communication from inquiry to final gallery delivery.',
+const homeActions = [
+  {
+    title: 'Services',
+    description: 'See portrait, wedding, event, and brand photography offerings in full.',
+    to: '/services',
+    label: 'Explore Services',
+  },
+  {
+    title: 'Portfolio',
+    description: 'Review the studio style, finishing standard, and visual direction before booking.',
+    to: '/portfolio',
+    label: 'View Portfolio',
+  },
+  {
+    title: 'Contact',
+    description: 'Ask questions, confirm availability, or start planning a session with the studio.',
+    to: '/contact',
+    label: 'Contact Studio',
+  },
 ];
 
 export default function Home() {
@@ -45,147 +66,125 @@ export default function Home() {
       <HeroSection />
 
       <SectionWrapper tone="light">
-        <div className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
+        <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
           <div className="light-panel overflow-hidden p-3">
             <img
               src={brandImages.heroTertiary}
               alt="African business woman in premium workspace"
-              className="aspect-[4/4.7] h-full w-full rounded-[26px] object-cover"
+              className="aspect-[4/4.8] h-full w-full rounded-[26px] object-cover"
             />
           </div>
+
           <div>
             <SectionHeader
-              eyebrow="About The Studio"
-              title="A premium photography experience built for modern Nigerian clients who care about quality."
+              eyebrow="Studio Overview"
+              title="A calm, premium photography studio for Nigerian clients who want quality handled well."
               description={aboutShortCopy}
               tone="light"
             />
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {proofPoints.map((point) => (
-                <div key={point} className="premium-card-light flex items-start gap-3 p-5 sm:p-6">
-                  <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand-deep">
-                    <BadgeCheck size={14} />
-                  </span>
-                  <p className="text-sm leading-8 text-charcoal/66">{point}</p>
-                </div>
-              ))}
-            </div>
-            <Link to="/about" className="btn-secondary mt-8">
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </SectionWrapper>
 
-      <SectionWrapper tone="light">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <SectionHeader
-            eyebrow="Services"
-            title="Portraits, weddings, events, families, and brand visuals handled with polish and care."
-            description={servicesShortCopy}
-            tone="light"
-          />
-          <Link to="/services" className="btn-light self-start">
-            View All Services
-          </Link>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {services.slice(0, 6).map((service, index) => (
-            <ServiceCard key={service.id} service={service} index={index} />
-          ))}
+            <div className="mt-8 grid gap-4">
+              {studioProof.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <article key={item.title} className="premium-card-light flex items-start gap-4 p-5 sm:p-6">
+                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-[18px] bg-brand-soft text-brand-deep">
+                      <Icon size={20} />
+                    </span>
+                    <div>
+                      <h3 className="font-display text-[1.8rem] leading-none text-charcoal sm:text-[2rem]">{item.title}</h3>
+                      <p className="mt-3 text-sm leading-8 text-charcoal/66">{item.description}</p>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <Link to="/about" className="btn-secondary">
+                Learn More
+              </Link>
+              <Link to="/booking" className="btn-light">
+                Book A Session
+              </Link>
+            </div>
+          </div>
         </div>
       </SectionWrapper>
 
       <SectionWrapper tone="dark">
-        <div className="grid gap-6 xl:grid-cols-[0.86fr_1.14fr] xl:items-start">
+        <div className="grid gap-6 xl:grid-cols-[0.9fr_1.1fr] xl:items-start">
           <div className="glass-panel p-8 sm:p-10">
             <p className="text-[0.64rem] font-semibold uppercase tracking-[0.28em] text-brand-soft/86">
-              Why Clients Choose Us
+              Brand Foundation
             </p>
             <h2 className="mt-5 max-w-[12ch] font-display text-[clamp(2.8rem,5vw,4.5rem)] leading-[0.96] text-white">
-              A process built around clarity, comfort, and business-class execution.
+              Thoughtful creative direction supported by a disciplined working process.
             </h2>
             <p className="mt-6 text-[1rem] leading-8 text-white/72 sm:text-[1.05rem] sm:leading-9">
-              Africa Neno Production blends creative taste with a smooth operational process, so clients feel guided, prepared, and proud of the result.
+              Africa Neno Production is built for clients who want imagery that feels elegant, trustworthy, and professionally managed from inquiry to delivery.
             </p>
           </div>
+
           <div className="grid gap-4 md:grid-cols-2">
-            {whyChooseUs.slice(0, 4).map((item) => {
-              const Icon = iconMap[item.icon] || Sparkles;
-              return (
-                <article key={item.title} className="rounded-[28px] border border-white/12 bg-white/[0.08] p-6 shadow-[0_18px_42px_rgba(4,20,10,0.16)] backdrop-blur-sm">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-[18px] bg-white/10 text-brand-soft">
-                    <Icon size={22} />
-                  </span>
-                  <h3 className="mt-5 font-display text-[2rem] leading-none text-white">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-8 text-white/72">{item.description}</p>
-                </article>
-              );
-            })}
+            <article className="rounded-[28px] border border-white/12 bg-white/[0.08] p-6 shadow-[0_18px_42px_rgba(4,20,10,0.16)] backdrop-blur-sm md:col-span-2">
+              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-brand-soft/60">
+                Mission
+              </p>
+              <p className="mt-4 font-display text-[2.2rem] leading-[0.98] text-white sm:text-[2.6rem]">{mission}</p>
+            </article>
+
+            <article className="rounded-[28px] border border-white/12 bg-white/[0.08] p-6 shadow-[0_18px_42px_rgba(4,20,10,0.16)] backdrop-blur-sm">
+              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-brand-soft/60">
+                Vision
+              </p>
+              <p className="mt-4 text-sm leading-8 text-white/72">{vision}</p>
+            </article>
+
+            <article className="rounded-[28px] border border-white/12 bg-white/[0.08] p-6 shadow-[0_18px_42px_rgba(4,20,10,0.16)] backdrop-blur-sm">
+              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-brand-soft/60">
+                Why Clients Return
+              </p>
+              <div className="mt-4 space-y-4">
+                {whyChooseUs.slice(0, 3).map((item) => (
+                  <div key={item.title} className="flex items-start gap-3 text-sm leading-7 text-white/72">
+                    <span className="mt-2 inline-flex h-2 w-2 shrink-0 rounded-full bg-brand-soft" />
+                    <div>
+                      <p className="font-semibold uppercase tracking-[0.16em] text-white/84">{item.title}</p>
+                      <p className="mt-1">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </article>
           </div>
         </div>
       </SectionWrapper>
 
       <SectionWrapper tone="light">
         <SectionHeader
-          eyebrow="Packages"
-          title="Clear package options that make premium photography easier to choose."
-          description="Compare coverage depth, image delivery, and the type of experience each package is designed to support."
+          eyebrow="Explore Further"
+          title="Use the dedicated pages to review the studio in more detail."
+          description={`Home now stays focused on the studio itself, while the rest of the site gives deeper detail whenever you need it.`}
           align="center"
           tone="light"
         />
+
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {packages.map((item, index) => (
-            <PackageCard key={item.id} item={item} index={index} tone="light" />
+          {homeActions.map((item) => (
+            <article key={item.title} className="premium-card-light flex h-full flex-col p-7 sm:p-8">
+              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-brand-deep/46">
+                {locationLabel}
+              </p>
+              <h3 className="mt-4 font-display text-[2rem] leading-[0.96] text-charcoal sm:text-[2.35rem]">
+                {item.title}
+              </h3>
+              <p className="mt-4 flex-1 text-sm leading-8 text-charcoal/66">{item.description}</p>
+              <Link to={item.to} className="btn-light mt-8 self-start">
+                {item.label}
+              </Link>
+            </article>
           ))}
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper tone="dark">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <SectionHeader
-            eyebrow="Portfolio"
-            title="A curated look at the moments, portraits, and brand visuals we create."
-            description="Browse selected Nigerian wedding, portrait, family, product, and founder-focused imagery in a cleaner gallery experience."
-            tone="dark"
-          />
-          <Link to="/portfolio" className="btn-ghost self-start">
-            View Full Portfolio
-          </Link>
-        </div>
-        <div className="mt-12">
-          <GalleryGrid items={portfolio} limit={6} tone="dark" />
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper tone="light">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <SectionHeader
-            eyebrow="Client Reviews"
-            title="Kind words from clients who trusted us with important personal and business moments."
-            description="Comfort, professionalism, and polished delivery show up repeatedly in the feedback we receive."
-            tone="light"
-          />
-          <Link to="/testimonials" className="btn-light self-start">
-            See All Reviews
-          </Link>
-        </div>
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {testimonials.slice(0, 3).map((item, index) => (
-            <TestimonialCard key={item.id} item={item} index={index} tone="light" />
-          ))}
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper tone="dark">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <SectionHeader
-            eyebrow="FAQ"
-            title="Answers that help visitors feel informed, prepared, and ready to book."
-            description="We keep the process simple, transparent, and easy to understand before production begins."
-            tone="dark"
-          />
-          <FAQAccordion items={faq} tone="dark" />
         </div>
       </SectionWrapper>
 
