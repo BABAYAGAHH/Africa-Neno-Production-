@@ -12,7 +12,7 @@ export const portfolio = [
     id: 'studio-led-portrait',
     title: 'Studio-Led Portrait',
     category: 'Portraits',
-    image: brandImages.heroPrimary,
+    image: brandImages.portraitProfessional,
     description: 'Confident portrait work built around clean lighting, strong posture, and premium finishing.',
   },
   {

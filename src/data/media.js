@@ -5,6 +5,8 @@ export const brandImages = {
     'https://images.pexels.com/photos/29277896/pexels-photo-29277896.jpeg?auto=compress&cs=tinysrgb&w=1600',
   heroTertiary:
     'https://images.pexels.com/photos/36489506/pexels-photo-36489506.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  portraitProfessional:
+    'https://images.pexels.com/photos/24860482/pexels-photo-24860482.jpeg?auto=compress&cs=tinysrgb&w=1600',
   aboutHero:
     'https://images.pexels.com/photos/35009925/pexels-photo-35009925.jpeg?auto=compress&cs=tinysrgb&w=1600',
   aboutStory:
